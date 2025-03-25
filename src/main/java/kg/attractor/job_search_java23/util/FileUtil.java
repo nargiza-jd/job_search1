@@ -38,7 +38,7 @@ public class FileUtil {
 
     public List<Resume> getResumes(String path) {
         Type listType = new TypeToken<Map<String, List<Resume>>>() {}.getType();
-        try (Reader reader = new FileReader(UPLOAD_DIR + path)) {
+        try (Reader reader = new FileReader("data" + path)) {
             Map<String, List<Resume>> resumes = gson.fromJson(reader, listType);
             return resumes.get("resumes");
         } catch (IOException e) {
