@@ -1,9 +1,11 @@
 package kg.attractor.job_search_java23.controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
+import kg.attractor.job_search_java23.dto.VacancyDto;
+import kg.attractor.job_search_java23.model.Vacancy;
+import kg.attractor.job_search_java23.service.VacancyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,9 +14,12 @@ import java.util.List;
 @RequestMapping("vacancies")
 @RequiredArgsConstructor
 public class VacancyController {
+
+    private final VacancyService vacancyService;
+
     @GetMapping
-    public ResponseEntity<?> getVacancies() {
-        return ResponseEntity.ok("Vacancies");
+    public List<VacancyDto> getVacancies() {
+        return vacancyService.getAllVacancies();
     }
 
     @GetMapping("{vacancyId}")
@@ -22,4 +27,9 @@ public class VacancyController {
         return ResponseEntity.ok(vacancyId);
     }
 
+    @PostMapping
+    public ResponseEntity<?> addVacancy(@RequestBody VacancyDto vacancyDto) {
+        vacancyService.createVacancy(vacancyDto);
+        return ResponseEntity.status(201).build();
+    }
 }
