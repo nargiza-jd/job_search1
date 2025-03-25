@@ -1,0 +1,15 @@
+{
+  "vacancies": [
+    {
+      "id": 1,
+      "title": "Backend Developer",
+      "description": "We need a strong Java backend developer.",
+      "salary": 1500,
+      "category": "IT",
+      "experienceFrom": 1,
+      "experienceTo": 3,
+      "published": true,
+      "companyId": 2
+    }
+  ]
+}
