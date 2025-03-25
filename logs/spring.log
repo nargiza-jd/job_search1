@@ -85,3 +85,2183 @@ Consider defining a bean of type 'org.springframework.jdbc.core.JdbcTemplate' in
 2025-03-25T20:06:55.431+06:00  WARN 12368 --- [Job Search] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s734ms).
 2025-03-25T20:22:51.103+06:00  WARN 12368 --- [Job Search] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s669ms).
 2025-03-25T20:39:16.832+06:00  WARN 12368 --- [Job Search] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s700ms).
+2025-03-25T20:55:35.619+06:00  INFO 12368 --- [Job Search] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-25T20:55:35.624+06:00  INFO 12368 --- [Job Search] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-25T20:55:35.627+06:00  INFO 12368 --- [Job Search] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-25T20:55:35.630+06:00  INFO 12368 --- [Job Search] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-25T20:55:38.070+06:00  INFO 13729 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : Starting JobSearchJava23Application using Java 23.0.2 with PID 13729 (/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes started by nargiza in /Users/nargiza/Desktop/lesson52/job_search_java23)
+2025-03-25T20:55:38.071+06:00  INFO 13729 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : No active profile set, falling back to 1 default profile: "default"
+2025-03-25T20:55:38.431+06:00  INFO 13729 --- [Job Search] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-03-25T20:55:38.436+06:00  INFO 13729 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-25T20:55:38.436+06:00  INFO 13729 --- [Job Search] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-25T20:55:38.449+06:00  INFO 13729 --- [Job Search] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-25T20:55:38.449+06:00  INFO 13729 --- [Job Search] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 358 ms
+2025-03-25T20:55:38.500+06:00  INFO 13729 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-25T20:55:38.615+06:00  INFO 13729 --- [Job Search] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/test user=ROOT
+2025-03-25T20:55:38.616+06:00  INFO 13729 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-25T20:55:38.633+06:00  INFO 13729 --- [Job Search] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-03-25T20:55:38.681+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_tables.yaml
+2025-03-25T20:55:38.742+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-03-25T20:55:38.768+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-03-25T20:55:38.769+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_insert_movies.sql
+2025-03-25T20:55:38.776+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_table.yml
+2025-03-25T20:55:38.779+06:00  INFO 13729 --- [Job Search] [main] liquibase.snapshot                       : Creating snapshot
+2025-03-25T20:55:38.803+06:00  INFO 13729 --- [Job Search] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-03-25T20:55:38.803+06:00  INFO 13729 --- [Job Search] [main] liquibase.command                        : Using deploymentId: 2914538490
+2025-03-25T20:55:38.803+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-03-25T20:55:38.812+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-director-table::author
+2025-03-25T20:55:38.814+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Table director created
+2025-03-25T20:55:38.815+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-director-table::author ran successfully in 2ms
+2025-03-25T20:55:38.817+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-movie-table::author
+2025-03-25T20:55:38.819+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Table movie created
+2025-03-25T20:55:38.820+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-movie-table::author ran successfully in 2ms
+2025-03-25T20:55:38.820+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-cast-member-table::author
+2025-03-25T20:55:38.821+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Table cast_member created
+2025-03-25T20:55:38.821+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-cast-member-table::author ran successfully in 0ms
+2025-03-25T20:55:38.822+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-movie-cast-member-table::author
+2025-03-25T20:55:38.824+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : Table movie_cast_member created
+2025-03-25T20:55:38.824+06:00  INFO 13729 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-movie-cast-member-table::author ran successfully in 2ms
+2025-03-25T20:55:38.825+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/002_insert_movies.sql::raw::includeAll
+2025-03-25T20:55:38.831+06:00 ERROR 13729 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/002_insert_movies.sql::raw::includeAll encountered an exception.
+
+liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:497) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:790) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:126) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:70) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:133) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:122) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:267) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:271) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:91) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:114) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:112) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:100) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1667) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at kg.attractor.job_search_java23.JobSearchJava23Application.main(JobSearchJava23Application.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7945) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7916) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7895) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7857) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseInsert(Parser.java:1521) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:698) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491) ~[liquibase-core-4.31.1.jar:na]
+	... 108 common frames omitted
+
+2025-03-25T20:55:38.835+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : UPDATE SUMMARY
+2025-03-25T20:55:38.835+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : Run:                          4
+2025-03-25T20:55:38.835+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : Previously run:               0
+2025-03-25T20:55:38.835+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : Filtered out:                 0
+2025-03-25T20:55:38.835+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : -------------------------------
+2025-03-25T20:55:38.835+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : Total change sets:            6
+2025-03-25T20:55:38.836+06:00  INFO 13729 --- [Job Search] [main] liquibase.util                           : Update summary generated
+2025-03-25T20:55:38.836+06:00  INFO 13729 --- [Job Search] [main] liquibase.command                        : Update command encountered an exception.
+2025-03-25T20:55:38.837+06:00  INFO 13729 --- [Job Search] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-03-25T20:55:38.838+06:00  INFO 13729 --- [Job Search] [main] liquibase.command                        : Logging exception.
+2025-03-25T20:55:38.838+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Details
+2025-03-25T20:55:38.838+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Class:  JdbcSQLSyntaxErrorException
+2025-03-25T20:55:38.838+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232]
+2025-03-25T20:55:38.838+06:00  INFO 13729 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Source:  H2 2.3.232 (2024-08-11)
+2025-03-25T20:55:38.838+06:00  INFO 13729 --- [Job Search] [main] liquibase.command                        : Command execution complete
+2025-03-25T20:55:39.526+06:00  WARN 13729 --- [Job Search] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeController' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/controller/ResumeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+2025-03-25T20:55:39.527+06:00  INFO 13729 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-25T20:55:39.537+06:00  INFO 13729 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-25T20:55:39.538+06:00  INFO 13729 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-03-25T20:55:39.545+06:00  INFO 13729 --- [Job Search] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-25T20:55:39.552+06:00 ERROR 13729 --- [Job Search] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeController' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/controller/ResumeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at kg.attractor.job_search_java23.JobSearchJava23Application.main(JobSearchJava23Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1667) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 48 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 60 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	... 62 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:155) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:114) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:112) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:100) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
+	... 80 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:840) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:126) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:70) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:133) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:122) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:267) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:271) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:91) ~[liquibase-core-4.31.1.jar:na]
+	... 88 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:497) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:790) ~[liquibase-core-4.31.1.jar:na]
+	... 103 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7945) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7916) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7895) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7857) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseInsert(Parser.java:1521) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:698) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491) ~[liquibase-core-4.31.1.jar:na]
+	... 108 common frames omitted
+
+2025-03-25T20:56:03.084+06:00  INFO 13750 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : Starting JobSearchJava23Application using Java 23.0.2 with PID 13750 (/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes started by nargiza in /Users/nargiza/Desktop/lesson52/job_search_java23)
+2025-03-25T20:56:03.085+06:00  INFO 13750 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : No active profile set, falling back to 1 default profile: "default"
+2025-03-25T20:56:03.407+06:00  INFO 13750 --- [Job Search] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-03-25T20:56:03.411+06:00  INFO 13750 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-25T20:56:03.411+06:00  INFO 13750 --- [Job Search] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-25T20:56:03.424+06:00  INFO 13750 --- [Job Search] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-25T20:56:03.424+06:00  INFO 13750 --- [Job Search] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 323 ms
+2025-03-25T20:56:03.473+06:00  INFO 13750 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-25T20:56:03.589+06:00  INFO 13750 --- [Job Search] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/test user=ROOT
+2025-03-25T20:56:03.590+06:00  INFO 13750 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-25T20:56:03.606+06:00  INFO 13750 --- [Job Search] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-03-25T20:56:03.651+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_tables.yaml
+2025-03-25T20:56:03.708+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-03-25T20:56:03.735+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-03-25T20:56:03.736+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_insert_movies.sql
+2025-03-25T20:56:03.745+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_create_table.yml
+2025-03-25T20:56:03.749+06:00  INFO 13750 --- [Job Search] [main] liquibase.snapshot                       : Creating snapshot
+2025-03-25T20:56:03.773+06:00  INFO 13750 --- [Job Search] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-03-25T20:56:03.773+06:00  INFO 13750 --- [Job Search] [main] liquibase.command                        : Using deploymentId: 2914563463
+2025-03-25T20:56:03.773+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-03-25T20:56:03.782+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-director-table::author
+2025-03-25T20:56:03.784+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Table director created
+2025-03-25T20:56:03.784+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-director-table::author ran successfully in 2ms
+2025-03-25T20:56:03.786+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-movie-table::author
+2025-03-25T20:56:03.789+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Table movie created
+2025-03-25T20:56:03.789+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-movie-table::author ran successfully in 2ms
+2025-03-25T20:56:03.790+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-cast-member-table::author
+2025-03-25T20:56:03.791+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Table cast_member created
+2025-03-25T20:56:03.791+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-cast-member-table::author ran successfully in 1ms
+2025-03-25T20:56:03.792+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/001_create_tables.yaml::create-movie-cast-member-table::author
+2025-03-25T20:56:03.794+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : Table movie_cast_member created
+2025-03-25T20:56:03.794+06:00  INFO 13750 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/001_create_tables.yaml::create-movie-cast-member-table::author ran successfully in 2ms
+2025-03-25T20:56:03.795+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/002_insert_movies.sql::raw::includeAll
+2025-03-25T20:56:03.801+06:00 ERROR 13750 --- [Job Search] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/002_insert_movies.sql::raw::includeAll encountered an exception.
+
+liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:497) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:790) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:126) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:70) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:133) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:122) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:267) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:271) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:91) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:114) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:112) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:100) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1667) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at kg.attractor.job_search_java23.JobSearchJava23Application.main(JobSearchJava23Application.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7945) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7916) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7895) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7857) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseInsert(Parser.java:1521) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:698) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491) ~[liquibase-core-4.31.1.jar:na]
+	... 108 common frames omitted
+
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : UPDATE SUMMARY
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : Run:                          4
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : Previously run:               0
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : Filtered out:                 0
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : -------------------------------
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : Total change sets:            6
+2025-03-25T20:56:03.805+06:00  INFO 13750 --- [Job Search] [main] liquibase.util                           : Update summary generated
+2025-03-25T20:56:03.806+06:00  INFO 13750 --- [Job Search] [main] liquibase.command                        : Update command encountered an exception.
+2025-03-25T20:56:03.807+06:00  INFO 13750 --- [Job Search] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-03-25T20:56:03.808+06:00  INFO 13750 --- [Job Search] [main] liquibase.command                        : Logging exception.
+2025-03-25T20:56:03.808+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Details
+2025-03-25T20:56:03.808+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Class:  JdbcSQLSyntaxErrorException
+2025-03-25T20:56:03.808+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232]
+2025-03-25T20:56:03.809+06:00  INFO 13750 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Source:  H2 2.3.232 (2024-08-11)
+2025-03-25T20:56:03.809+06:00  INFO 13750 --- [Job Search] [main] liquibase.command                        : Command execution complete
+2025-03-25T20:56:04.359+06:00  WARN 13750 --- [Job Search] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeController' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/controller/ResumeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+2025-03-25T20:56:04.359+06:00  INFO 13750 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-25T20:56:04.369+06:00  INFO 13750 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-25T20:56:04.370+06:00  INFO 13750 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-03-25T20:56:04.378+06:00  INFO 13750 --- [Job Search] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-25T20:56:04.386+06:00 ERROR 13750 --- [Job Search] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeController' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/controller/ResumeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at kg.attractor.job_search_java23.JobSearchJava23Application.main(JobSearchJava23Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1667) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 48 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 60 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	... 62 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:155) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:114) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:112) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:100) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
+	... 80 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/initial/002_insert_movies.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:840) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:126) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:70) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:133) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:122) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:267) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:271) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:91) ~[liquibase-core-4.31.1.jar:na]
+	... 88 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232] [Failed SQL: (42102) INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2);]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:497) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:790) ~[liquibase-core-4.31.1.jar:na]
+	... 103 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+INSERT INTO users (username, email, password, phone, profile_image_url, role)
+VALUES
+    ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
+    ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
+
+INSERT INTO resume (title, category, expected_salary, telegram, email, phone, facebook, linkedin, published, user_id)
+VALUES
+    ('Java Developer', 'IT', 1000, '@java_dev', 'applicant1@example.com', '0500123456', 'fb.com/applicant1', 'linkedin.com/in/applicant1', true, 1),
+    ('Frontend Developer', 'IT', 900, '@frontend_dev', 'applicant1@example.com', '0500123456', 'fb.com/frontend', 'linkedin.com/in/frontend', true, 1);
+
+INSERT INTO vacancy (title, description, salary, category, experience_from, experience_to, published, company_id)
+VALUES
+    ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
+    ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
+
+INSERT INTO education (resume_id, institution, degree, year)
+VALUES
+    (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+    (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years)
+VALUES
+    (1, 'Tech Solutions', 'Junior Java Developer', 2),
+    (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id)
+VALUES
+    (1, 1),
+    (2, 2); [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7945) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7916) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7895) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7857) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseInsert(Parser.java:1521) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:698) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491) ~[liquibase-core-4.31.1.jar:na]
+	... 108 common frames omitted
+
