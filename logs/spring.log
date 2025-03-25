@@ -35,3 +35,18 @@ Consider defining a bean of type 'org.springframework.jdbc.core.JdbcTemplate' in
 2025-03-25T18:24:42.819+06:00  INFO 10928 --- [Job Search] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
 2025-03-25T18:24:42.938+06:00  INFO 10928 --- [Job Search] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
 2025-03-25T18:24:42.943+06:00  INFO 10928 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : Started JobSearchJava23Application in 0.727 seconds (process running for 0.924)
+2025-03-25T18:37:52.321+06:00  INFO 10928 --- [Job Search] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-25T18:37:52.325+06:00  INFO 10928 --- [Job Search] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-25T18:37:53.806+06:00  INFO 11272 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : Starting JobSearchJava23Application using Java 23.0.2 with PID 11272 (/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes started by nargiza in /Users/nargiza/Desktop/lesson52/job_search_java23)
+2025-03-25T18:37:53.807+06:00  INFO 11272 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : No active profile set, falling back to 1 default profile: "default"
+2025-03-25T18:37:54.151+06:00  INFO 11272 --- [Job Search] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-03-25T18:37:54.156+06:00  INFO 11272 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-25T18:37:54.156+06:00  INFO 11272 --- [Job Search] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-25T18:37:54.169+06:00  INFO 11272 --- [Job Search] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-25T18:37:54.169+06:00  INFO 11272 --- [Job Search] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 347 ms
+2025-03-25T18:37:54.206+06:00  INFO 11272 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-25T18:37:54.320+06:00  INFO 11272 --- [Job Search] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/test user=ROOT
+2025-03-25T18:37:54.321+06:00  INFO 11272 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-25T18:37:54.387+06:00  INFO 11272 --- [Job Search] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-25T18:37:54.508+06:00  INFO 11272 --- [Job Search] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2025-03-25T18:37:54.511+06:00  INFO 11272 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : Started JobSearchJava23Application in 0.853 seconds (process running for 1.05)
