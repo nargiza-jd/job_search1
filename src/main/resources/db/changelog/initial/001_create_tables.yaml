@@ -1,204 +1,115 @@
 ﻿databaseChangeLog:
   - changeSet:
-      id: create-user-table
+      id: 001-create-users
       author: jobsearch
       changes:
         - createTable:
             tableName: users
             columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: username
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: email
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: password
-                  type: varchar(255)
-              - column:
-                  name: phone
-                  type: varchar(50)
-              - column:
-                  name: profile_image_url
-                  type: varchar(255)
-              - column:
-                  name: role
-                  type: varchar(50)
+              - { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - { name: username, type: varchar(255), constraints: { nullable: false } }
+              - { name: email, type: varchar(255), constraints: { nullable: false } }
+              - { name: password, type: varchar(255) }
+              - { name: phone, type: varchar(50) }
+              - { name: profile_image_url, type: varchar(255) }
+              - { name: role, type: varchar(50) }
+
   - changeSet:
-      id: create-resume-table
+      id: 002-create-resume
       author: jobsearch
       changes:
         - createTable:
             tableName: resume
             columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: title
-                  type: varchar(255)
-              - column:
-                  name: category
-                  type: varchar(100)
-              - column:
-                  name: expected_salary
-                  type: int
-              - column:
-                  name: telegram
-                  type: varchar(100)
-              - column:
-                  name: email
-                  type: varchar(255)
-              - column:
-                  name: phone
-                  type: varchar(50)
-              - column:
-                  name: facebook
-                  type: varchar(255)
-              - column:
-                  name: linkedin
-                  type: varchar(255)
-              - column:
-                  name: published
-                  type: boolean
-              - column:
-                  name: user_id
-                  type: int
-                  constraints:
-                    foreignKeyName: fk_resume_user
-                    references: users(id)
+              - { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - { name: title, type: varchar(255) }
+              - { name: category, type: varchar(100) }
+              - { name: expected_salary, type: int }
+              - { name: telegram, type: varchar(100) }
+              - { name: email, type: varchar(255) }
+              - { name: phone, type: varchar(50) }
+              - { name: facebook, type: varchar(255) }
+              - { name: linkedin, type: varchar(255) }
+              - { name: published, type: boolean }
+              - name: user_id
+                type: int
+                constraints:
+                  nullable: false
+                  foreignKeyName: fk_resume_user
+                  references: users(id)
+
   - changeSet:
-      id: create-vacancy-table
+      id: 003-create-vacancy
       author: jobsearch
       changes:
         - createTable:
             tableName: vacancy
             columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: title
-                  type: varchar(255)
-              - column:
-                  name: description
-                  type: varchar(500)
-              - column:
-                  name: salary
-                  type: int
-              - column:
-                  name: category
-                  type: varchar(100)
-              - column:
-                  name: experience_from
-                  type: int
-              - column:
-                  name: experience_to
-                  type: int
-              - column:
-                  name: published
-                  type: boolean
-              - column:
-                  name: company_id
-                  type: int
-                  constraints:
-                    foreignKeyName: fk_vacancy_user
-                    references: users(id)
+              - { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - { name: title, type: varchar(255) }
+              - { name: description, type: varchar(500) }
+              - { name: salary, type: int }
+              - { name: category, type: varchar(100) }
+              - { name: experience_from, type: int }
+              - { name: experience_to, type: int }
+              - { name: published, type: boolean }
+              - name: company_id
+                type: int
+                constraints:
+                  nullable: false
+                  foreignKeyName: fk_vacancy_user
+                  references: users(id)
+
   - changeSet:
-      id: create-response-table
+      id: 004-create-response
       author: jobsearch
       changes:
         - createTable:
             tableName: response
             columns:
-              - column:
-                  name: resume_id
-                  type: int
-                  constraints:
-                    nullable: false
-                    foreignKeyName: fk_response_resume
-                    references: resume(id)
-              - column:
-                  name: vacancy_id
-                  type: int
-                  constraints:
-                    nullable: false
-                    foreignKeyName: fk_response_vacancy
-                    references: vacancy(id)
+              - name: resume_id
+                type: int
+                constraints:
+                  nullable: false
+                  foreignKeyName: fk_response_resume
+                  references: resume(id)
+              - name: vacancy_id
+                type: int
+                constraints:
+                  nullable: false
+                  foreignKeyName: fk_response_vacancy
+                  references: vacancy(id)
+
   - changeSet:
-      id: create-education-table
+      id: 005-create-education
       author: jobsearch
       changes:
         - createTable:
             tableName: education
             columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: resume_id
-                  type: int
-                  constraints:
-                    foreignKeyName: fk_education_resume
-                    references: resume(id)
-              - column:
-                  name: institution
-                  type: varchar(255)
-              - column:
-                  name: degree
-                  type: varchar(255)
-              - column:
-                  name: year
-                  type: int
+              - { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - name: resume_id
+                type: int
+                constraints:
+                  foreignKeyName: fk_education_resume
+                  references: resume(id)
+              - { name: institution, type: varchar(255) }
+              - { name: degree, type: varchar(255) }
+              - { name: year, type: int }
+
   - changeSet:
-      id: create-experience-table
+      id: 006-create-experience
       author: jobsearch
       changes:
         - createTable:
             tableName: experience
             columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: resume_id
-                  type: int
-                  constraints:
-                    foreignKeyName: fk_experience_resume
-                    references: resume(id)
-              - column:
-                  name: company
-                  type: varchar(255)
-              - column:
-                  name: position
-                  type: varchar(255)
-              - column:
-                  name: years
-                  type: int
+              - { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - name: resume_id
+                type: int
+                constraints:
+                  foreignKeyName: fk_experience_resume
+                  references: resume(id)
+              - { name: company, type: varchar(255) }
+              - { name: position, type: varchar(255) }
+              - { name: years, type: int }
