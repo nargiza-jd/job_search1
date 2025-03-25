@@ -4759,3 +4759,175 @@ VALUES
 	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:491) ~[liquibase-core-4.31.1.jar:na]
 	... 108 common frames omitted
 
+2025-03-25T21:13:26.306+06:00  INFO 14317 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : Starting JobSearchJava23Application using Java 23.0.2 with PID 14317 (/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes started by nargiza in /Users/nargiza/Desktop/lesson52/job_search_java23)
+2025-03-25T21:13:26.307+06:00  INFO 14317 --- [Job Search] [main] k.a.j.JobSearchJava23Application         : No active profile set, falling back to 1 default profile: "default"
+2025-03-25T21:13:26.669+06:00  INFO 14317 --- [Job Search] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2025-03-25T21:13:26.674+06:00  INFO 14317 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-25T21:13:26.674+06:00  INFO 14317 --- [Job Search] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-25T21:13:26.688+06:00  INFO 14317 --- [Job Search] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-25T21:13:26.688+06:00  INFO 14317 --- [Job Search] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 366 ms
+2025-03-25T21:13:26.742+06:00  INFO 14317 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-25T21:13:26.856+06:00  INFO 14317 --- [Job Search] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/test user=ROOT
+2025-03-25T21:13:26.857+06:00  INFO 14317 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-25T21:13:26.876+06:00  INFO 14317 --- [Job Search] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-03-25T21:13:26.918+06:00  INFO 14317 --- [Job Search] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_tables.yaml
+2025-03-25T21:13:26.956+06:00  INFO 14317 --- [Job Search] [main] liquibase.command                        : Logging exception.
+2025-03-25T21:13:26.957+06:00  INFO 14317 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Details
+2025-03-25T21:13:26.957+06:00  INFO 14317 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ParsedNodeException
+2025-03-25T21:13:26.957+06:00  INFO 14317 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Multiple nodes match null/name
+2025-03-25T21:13:26.957+06:00  INFO 14317 --- [Job Search] [main] liquibase.ui                             : ERROR: Exception Primary Source:  H2 2.3.232 (2024-08-11)
+2025-03-25T21:13:26.957+06:00  INFO 14317 --- [Job Search] [main] liquibase.command                        : Command execution complete
+2025-03-25T21:13:27.952+06:00  WARN 14317 --- [Job Search] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeController' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/controller/ResumeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+2025-03-25T21:13:27.952+06:00  INFO 14317 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-25T21:13:27.964+06:00  INFO 14317 --- [Job Search] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-25T21:13:27.966+06:00  INFO 14317 --- [Job Search] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-03-25T21:13:27.974+06:00  INFO 14317 --- [Job Search] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-25T21:13:27.982+06:00 ERROR 14317 --- [Job Search] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeController' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/controller/ResumeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at kg.attractor.job_search_java23.JobSearchJava23Application.main(JobSearchJava23Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeServiceImpl' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/service/impl/ResumeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1667) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resumeDao' defined in file [/Users/nargiza/Desktop/lesson52/job_search_java23/target/classes/kg/attractor/job_search_java23/dao/ResumeDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1609) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1555) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 48 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:288) ~[liquibase-core-4.31.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	... 60 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:241) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1333) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:326) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:278) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:271) ~[liquibase-core-4.31.1.jar:na]
+	... 62 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing classpath:/db/changelog/master.yml : Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at liquibase.parser.core.yaml.YamlChangeLogParser.parse(YamlChangeLogParser.java:98) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:186) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253) ~[liquibase-core-4.31.1.jar:na]
+	... 80 common frames omitted
+Caused by: liquibase.exception.SetupException: Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at liquibase.changelog.DatabaseChangeLog.includeAll(DatabaseChangeLog.java:849) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleIncludeAll(DatabaseChangeLog.java:617) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:481) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:462) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:429) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.parser.core.yaml.YamlChangeLogParser.parse(YamlChangeLogParser.java:92) ~[liquibase-core-4.31.1.jar:na]
+	... 86 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1110) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.lambda$includeAll$6(DatabaseChangeLog.java:844) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:201) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:210) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.includeAll(DatabaseChangeLog.java:841) ~[liquibase-core-4.31.1.jar:na]
+	... 91 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing db/changelog/initial/001_create_tables.yaml : Multiple nodes match null/name
+	at liquibase.parser.core.yaml.YamlChangeLogParser.parse(YamlChangeLogParser.java:98) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1082) ~[liquibase-core-4.31.1.jar:na]
+	... 97 common frames omitted
+Caused by: liquibase.parser.core.ParsedNodeException: Multiple nodes match null/name
+	at liquibase.parser.core.ParsedNode.getChild(ParsedNode.java:172) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.parser.core.ParsedNode.getChildValue(ParsedNode.java:284) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.parser.core.ParsedNode.getChildValue(ParsedNode.java:221) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.change.ColumnConfig.load(ColumnConfig.java:801) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.change.AbstractChange.load(AbstractChange.java:722) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.toChange(ChangeSet.java:637) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.handleChildNode(ChangeSet.java:559) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.handleChildNode(ChangeSet.java:555) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.ChangeSet.load(ChangeSet.java:482) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.createChangeSet(DatabaseChangeLog.java:1200) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleDbmsAttribute(DatabaseChangeLog.java:680) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:471) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:462) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:429) ~[liquibase-core-4.31.1.jar:na]
+	at liquibase.parser.core.yaml.YamlChangeLogParser.parse(YamlChangeLogParser.java:92) ~[liquibase-core-4.31.1.jar:na]
+	... 98 common frames omitted
+

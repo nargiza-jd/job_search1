@@ -9,10 +9,10 @@
               - { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
               - { name: username, type: varchar(255), constraints: { nullable: false } }
               - { name: email, type: varchar(255), constraints: { nullable: false } }
-              - { name: password, type: varchar(255) }
+              - { name: password, type: varchar(255), constraints: { nullable: false } }
               - { name: phone, type: varchar(50) }
               - { name: profile_image_url, type: varchar(255) }
-              - { name: role, type: varchar(50) }
+              - { name: role, type: varchar(50), constraints: { nullable: false } }
 
   - changeSet:
       id: 002-create-resume
