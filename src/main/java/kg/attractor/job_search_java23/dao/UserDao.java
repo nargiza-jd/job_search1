@@ -25,12 +25,12 @@ public class UserDao {
     private final KeyHolder keyHolder = new GeneratedKeyHolder();
 
     public List<User> getUsers() {
-        String sql = "select * from users";
+        String sql = "SELECT * FROM users";
         return jdbcTemplate.query(sql, new UserMapper());
     }
 
     public Optional<User> getUserById(int id) {
-        String sql = "select * from users where id = ?";
+        String sql = "SELECT * FROM users WHERE id = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
                         jdbcTemplate.query(sql, new UserMapper(), id)
@@ -39,7 +39,7 @@ public class UserDao {
     }
 
     public void create(User user) {
-        String sql = "insert into users(name, password) values(:name, :password)";
+        String sql = "INSERT INTO users(name, password) VALUES (:name, :password)";
         namedParameterJdbcTemplate.update(
                 sql,
                 new MapSqlParameterSource()
@@ -49,7 +49,8 @@ public class UserDao {
     }
 
     public int createAndReturnId(User user) {
-        String sql = "insert into users(name, password) values(?, ?)";
+        String sql = "INSERT INTO users(name, password) VALUES (?, ?)";
+
         jdbcTemplate.update(
                 con -> {
                     PreparedStatement ps = con.prepareStatement(sql, new String[]{"id"});
@@ -59,5 +60,24 @@ public class UserDao {
                 }, keyHolder
         );
         return Objects.requireNonNull(keyHolder.getKey()).intValue();
+    }
+
+    public List<User> findByName(String name) {
+        String sql = "SELECT * FROM users WHERE name ILIKE ?";
+        return jdbcTemplate.query(sql, new UserMapper(), "%" + name + "%");
+    }
+
+    public List<User> findByPhone(String phone) {
+        String sql = "SELECT * FROM users WHERE phone LIKE ?";
+        return jdbcTemplate.query(sql, new UserMapper(), "%" + phone + "%");
+    }
+
+    public Optional<User> findByEmail(String email) {
+        String sql = "SELECT * FROM users WHERE email = ?";
+        return Optional.ofNullable(
+                DataAccessUtils.singleResult(
+                        jdbcTemplate.query(sql, new UserMapper(), email)
+                )
+        );
     }
 }
