@@ -1,5 +1,4 @@
-﻿
-INSERT INTO users (username, email, password, phone, profile_image_url, role) VALUES
+﻿INSERT INTO users (username, email, password, phone, profile_image_url, role) VALUES
                                                                                   ('applicant1', 'applicant1@example.com', 'pass123', '0500123456', 'applicant1.png', 'APPLICANT'),
                                                                                   ('employer1', 'employer1@example.com', 'pass456', '0500654321', 'employer1.png', 'EMPLOYER');
 
@@ -11,9 +10,9 @@ INSERT INTO vacancy (title, description, salary, category, experience_from, expe
                                                                                                                       ('Backend Developer', 'Spring Boot, PostgreSQL required', 1200, 'IT', 1, 3, true, 2),
                                                                                                                       ('UI/UX Designer', 'Experience with Figma and Adobe XD', 1100, 'Design', 0, 2, true, 2);
 
-INSERT INTO education (resume_id, institution, degree, "year") VALUES
-                                                                   (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
-                                                                   (2, 'International Design School', 'Diploma in UI/UX', 2021);
+INSERT INTO education (resume_id, institution, degree, year) VALUES
+                                                                 (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+                                                                 (2, 'International Design School', 'Diploma in UI/UX', 2021);
 
 INSERT INTO experience (resume_id, company, position, years) VALUES
                                                                  (1, 'Tech Solutions', 'Junior Java Developer', 2),

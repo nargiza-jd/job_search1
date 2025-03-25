@@ -1,0 +1,37 @@
+2025-03-25 22:13:44.618127+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "DATABASECHANGELOGLOCK" не найдена
+Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-232]
+2025-03-25 22:13:44.681957+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO education (resume_id, institution, degree, [*]year) VALUES\000a                                                                 (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),\000a                                                                 (2, 'International Design School', 'Diploma in UI/UX', 2021);\000a\000aINSERT INTO experience (resume_id, company, position, years) VALUES\000a                                                                 (1, 'Tech Solutions', 'Junior Java Developer', 2),\000a                                                                 (2, 'Creative Agency', 'UX Intern', 1);\000a\000aINSERT INTO response (resume_id, vacancy_id) VALUES\000a                                                 (1, 1),\000a                                                 (2, 2);"; ожидалось "identifier"
+Syntax error in SQL statement "INSERT INTO education (resume_id, institution, degree, [*]year) VALUES\000a                                                                 (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),\000a                                                                 (2, 'International Design School', 'Diploma in UI/UX', 2021);\000a\000aINSERT INTO experience (resume_id, company, position, years) VALUES\000a                                                                 (1, 'Tech Solutions', 'Junior Java Developer', 2),\000a                                                                 (2, 'Creative Agency', 'UX Intern', 1);\000a\000aINSERT INTO response (resume_id, vacancy_id) VALUES\000a                                                 (1, 1),\000a                                                 (2, 2);"; expected "identifier"; SQL statement:
+INSERT INTO education (resume_id, institution, degree, year) VALUES
+                                                                 (1, 'Kyrgyz State Technical University', 'Bachelor in Computer Science', 2020),
+                                                                 (2, 'International Design School', 'Diploma in UI/UX', 2021);
+
+INSERT INTO experience (resume_id, company, position, years) VALUES
+                                                                 (1, 'Tech Solutions', 'Junior Java Developer', 2),
+                                                                 (2, 'Creative Agency', 'UX Intern', 1);
+
+INSERT INTO response (resume_id, vacancy_id) VALUES
+                                                 (1, 1),
+                                                 (2, 2); [42001-232]
+2025-03-25 16:14:58 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
