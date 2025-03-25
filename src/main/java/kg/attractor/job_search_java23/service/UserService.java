@@ -5,9 +5,11 @@ import kg.attractor.job_search_java23.dto.UserDto;
 import java.util.List;
 
 public interface UserService {
-    List<UserDto> getAllUsers();
+    List<UserDto> getUsers();
 
-    UserDto getUserById(String userId);
+    UserDto getUserById(int id);
 
-    void createUser(UserDto userDto);
+    void addUser(UserDto userDto);
+
+    int createUserAndReturnId(UserDto userDto);
 }

@@ -13,9 +13,11 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@RequiredArgsConstructor
 public class ResumeServiceImpl implements ResumeService {
 
-    private final List<Resume> resumes;
+    private final ResumeDao resumeDao;
+    private final UserService userService;
 
     @Override
     public List<ResumeDto> getAllResumes() {
@@ -32,7 +34,7 @@ public class ResumeServiceImpl implements ResumeService {
                         .facebook(r.getFacebook())
                         .linkedin(r.getLinkedin())
                         .published(r.isPublished())
-                        .user(userService.getUserById(String.valueOf(r.getUserId())))
+                        .user(userService.getUserById(r.getUserId())) // если метод принимает int
                         .build())
                 .toList();
     }
@@ -42,6 +44,7 @@ public class ResumeServiceImpl implements ResumeService {
         int id = Integer.parseInt(resumeId);
         Resume resume = resumeDao.getResumeById(id)
                 .orElseThrow(ResumeNotFoundException::new);
+
         return ResumeDto.builder()
                 .id(resume.getId())
                 .title(resume.getTitle())
@@ -53,25 +56,7 @@ public class ResumeServiceImpl implements ResumeService {
                 .facebook(resume.getFacebook())
                 .linkedin(resume.getLinkedin())
                 .published(resume.isPublished())
-                .user(userService.getUserById(String.valueOf(resume.getUserId())))
+                .user(userService.getUserById(resume.getUserId()))
                 .build();
-    }
-
-    @Override
-    public void createResume(ResumeDto resumeDto) {
-        List<Resume> resumes = resumeDao.getResumes();
-        resumes.add(Resume.builder()
-                .id(resumes.size() + 1)
-                .title(resumeDto.getTitle())
-                .category(resumeDto.getCategory())
-                .expectedSalary(resumeDto.getExpectedSalary())
-                .telegram(resumeDto.getTelegram())
-                .email(resumeDto.getEmail())
-                .phone(resumeDto.getPhone())
-                .facebook(resumeDto.getFacebook())
-                .linkedin(resumeDto.getLinkedin())
-                .published(resumeDto.isPublished())
-                .userId(resumeDto.getUser().getId())
-                .build());
     }
 }
