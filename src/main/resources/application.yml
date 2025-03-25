@@ -2,7 +2,7 @@ server:
   port: 8089
 spring:
   application:
-    name: "Movie Review"
+    name: "Job Search"
   datasource:
     url: jdbc:h2:./db/test;AUTO_SERVER=TRUE
     username: root
