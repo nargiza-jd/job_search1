@@ -13,7 +13,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@RequiredArgsConstructor
 public class ResumeServiceImpl implements ResumeService {
 
     private final ResumeDao resumeDao;
@@ -34,7 +33,7 @@ public class ResumeServiceImpl implements ResumeService {
                         .facebook(r.getFacebook())
                         .linkedin(r.getLinkedin())
                         .published(r.isPublished())
-                        .user(userService.getUserById(r.getUserId())) // если метод принимает int
+                        .user(userService.getUserById(r.getUserId()))
                         .build())
                 .toList();
     }
@@ -58,5 +57,25 @@ public class ResumeServiceImpl implements ResumeService {
                 .published(resume.isPublished())
                 .user(userService.getUserById(resume.getUserId()))
                 .build();
+    }
+
+    @Override
+    public void createResume(ResumeDto resumeDto) {
+        List<Resume> resumes = resumeDao.getResumes();
+
+        resumes.add(Resume.builder()
+                .id(resumes.size() + 1)
+                .title(resumeDto.getTitle())
+                .category(resumeDto.getCategory())
+                .expectedSalary(resumeDto.getExpectedSalary())
+                .telegram(resumeDto.getTelegram())
+                .email(resumeDto.getEmail())
+                .phone(resumeDto.getPhone())
+                .facebook(resumeDto.getFacebook())
+                .linkedin(resumeDto.getLinkedin())
+                .published(resumeDto.isPublished())
+                .userId(resumeDto.getUser().getId())
+                .build()
+        );
     }
 }

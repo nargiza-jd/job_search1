@@ -32,7 +32,7 @@ public class VacancyServiceImpl implements VacancyService {
                         .experienceFrom(v.getExperienceFrom())
                         .experienceTo(v.getExperienceTo())
                         .published(v.isPublished())
-                        .employer(UserService.getUserById(String.valueOf(v.getCompanyId())))
+                        .employer(userService.getUserById(Integer.parseInt(String.valueOf(v.getCompanyId()))))
                         .build())
                 .toList();
     }
@@ -51,7 +51,7 @@ public class VacancyServiceImpl implements VacancyService {
                 .experienceFrom(vacancy.getExperienceFrom())
                 .experienceTo(vacancy.getExperienceTo())
                 .published(vacancy.isPublished())
-                .employer(userService.getUserById(String.valueOf(vacancy.getCompanyId())))
+                .employer(userService.getUserById(Integer.parseInt(String.valueOf(vacancy.getCompanyId()))))
                 .build();
     }
 

@@ -43,7 +43,7 @@ public class UserDao {
         namedParameterJdbcTemplate.update(
                 sql,
                 new MapSqlParameterSource()
-                        .addValue("name", user.getUserName())
+                        .addValue("name", user.getUsername())
                         .addValue("password", user.getPassword())
         );
     }
@@ -53,7 +53,7 @@ public class UserDao {
         jdbcTemplate.update(
                 con -> {
                     PreparedStatement ps = con.prepareStatement(sql, new String[]{"id"});
-                    ps.setString(1, user.getUserName());
+                    ps.setString(1, user.getUsername());
                     ps.setString(2, user.getPassword());
                     return ps;
                 }, keyHolder
