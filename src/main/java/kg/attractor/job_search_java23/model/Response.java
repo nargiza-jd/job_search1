@@ -5,6 +5,8 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Response {
     private int id;
     private int resumeId;
@@ -12,8 +14,11 @@ public class Response {
     private int applicantId;
     private int employerId;
 
+    private int userId;
+    private String message;
+
     @Override
     public String toString() {
-        return String.format("Отклик на вакансию #%d от соискателя #%d", vacancyId, applicantId);
+        return String.format("Отклик от пользователя #%d на вакансию #%d: %s", userId, vacancyId, message);
     }
 }

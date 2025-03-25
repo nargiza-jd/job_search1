@@ -80,4 +80,9 @@ public class UserDao {
                 )
         );
     }
+
+    public void updateUser(User user) {
+        String sql = "UPDATE users SET username = ?, email = ?, phone = ?, profile_image_url = ?, password = ?, role = ? WHERE id = ?";
+        jdbcTemplate.update(sql, user.getUsername(), user.getEmail(), user.getPhone(), user.getProfileImageUrl(), user.getPassword(), user.getRole(), user.getId());
+    }
 }

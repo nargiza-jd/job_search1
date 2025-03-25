@@ -29,4 +29,19 @@ public class VacancyDao {
                 )
         );
     }
+
+    public void addVacancy(Vacancy vacancy) {
+        String sql = "INSERT INTO vacancies (title, description, company, location, salary) VALUES (?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, vacancy.getTitle(), vacancy.getDescription(), vacancy.getCompany(), vacancy.getLocation(), vacancy.getSalary());
+    }
+
+    public void updateVacancy(Vacancy vacancy) {
+        String sql = "UPDATE vacancies SET title = ?, description = ?, company = ?, location = ?, salary = ? WHERE id = ?";
+        jdbcTemplate.update(sql, vacancy.getTitle(), vacancy.getDescription(), vacancy.getCompany(), vacancy.getLocation(), vacancy.getSalary(), vacancy.getId());
+    }
+
+    public void deleteVacancyById(int id) {
+        String sql = "DELETE FROM vacancies WHERE id = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }

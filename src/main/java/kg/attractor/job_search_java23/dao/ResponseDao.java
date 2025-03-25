@@ -29,4 +29,14 @@ public class ResponseDao {
                 )
         );
     }
+
+    public void addResponse(Response response) {
+        String sql = "INSERT INTO responses (user_id, vacancy_id, message) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, response.getUserId(), response.getVacancyId(), response.getMessage());
+    }
+
+    public void deleteResponseById(int id) {
+        String sql = "DELETE FROM responses WHERE id = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }
