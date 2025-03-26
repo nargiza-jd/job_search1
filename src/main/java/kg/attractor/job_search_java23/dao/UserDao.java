@@ -25,12 +25,12 @@ public class UserDao {
     private final KeyHolder keyHolder = new GeneratedKeyHolder();
 
     public List<User> getUsers() {
-        String sql = "SELECT * FROM users";
+        String sql = "SELECT * FROM USERS";
         return jdbcTemplate.query(sql, new UserMapper());
     }
 
     public Optional<User> getUserById(int id) {
-        String sql = "SELECT * FROM users WHERE id = ?";
+        String sql = "SELECT * FROM USERS WHERE id = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
                         jdbcTemplate.query(sql, new UserMapper(), id)
@@ -39,7 +39,7 @@ public class UserDao {
     }
 
     public void create(User user) {
-        String sql = "INSERT INTO users(name, password) VALUES (:name, :password)";
+        String sql = "INSERT INTO USERS(name, password) VALUES (:name, :password)";
         namedParameterJdbcTemplate.update(
                 sql,
                 new MapSqlParameterSource()
@@ -49,7 +49,7 @@ public class UserDao {
     }
 
     public int createAndReturnId(User user) {
-        String sql = "INSERT INTO users(name, password) VALUES (?, ?)";
+        String sql = "INSERT INTO USERS(name, password) VALUES (?, ?)";
 
         jdbcTemplate.update(
                 con -> {
@@ -63,17 +63,17 @@ public class UserDao {
     }
 
     public List<User> findByName(String name) {
-        String sql = "SELECT * FROM users WHERE name ILIKE ?";
+        String sql = "SELECT * FROM USERS WHERE name ILIKE ?";
         return jdbcTemplate.query(sql, new UserMapper(), "%" + name + "%");
     }
 
     public List<User> findByPhone(String phone) {
-        String sql = "SELECT * FROM users WHERE phone LIKE ?";
+        String sql = "SELECT * FROM USERS WHERE phone LIKE ?";
         return jdbcTemplate.query(sql, new UserMapper(), "%" + phone + "%");
     }
 
     public Optional<User> findByEmail(String email) {
-        String sql = "SELECT * FROM users WHERE email = ?";
+        String sql = "SELECT * FROM USERS WHERE email = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
                         jdbcTemplate.query(sql, new UserMapper(), email)
@@ -82,7 +82,7 @@ public class UserDao {
     }
 
     public void updateUser(User user) {
-        String sql = "UPDATE users SET username = ?, email = ?, phone = ?, profile_image_url = ?, password = ?, role = ? WHERE id = ?";
+        String sql = "UPDATE USERS SET username = ?, email = ?, phone = ?, profile_image_url = ?, password = ?, role = ? WHERE id = ?";
         jdbcTemplate.update(sql, user.getUsername(), user.getEmail(), user.getPhone(), user.getProfileImageUrl(), user.getPassword(), user.getRole(), user.getId());
     }
 }
