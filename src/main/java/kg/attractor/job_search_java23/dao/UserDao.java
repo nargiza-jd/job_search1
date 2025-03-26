@@ -39,17 +39,17 @@ public class UserDao {
     }
 
     public void create(User user) {
-        String sql = "INSERT INTO USERS(name, password) VALUES (:name, :password)";
+        String sql = "INSERT INTO USERS(username, password) VALUES (:username, :password)";
         namedParameterJdbcTemplate.update(
                 sql,
                 new MapSqlParameterSource()
-                        .addValue("name", user.getUsername())
+                        .addValue("username", user.getUsername())
                         .addValue("password", user.getPassword())
         );
     }
 
     public int createAndReturnId(User user) {
-        String sql = "INSERT INTO USERS(name, password) VALUES (?, ?)";
+        String sql = "INSERT INTO USERS(username, password) VALUES (?, ?)";
 
         jdbcTemplate.update(
                 con -> {
@@ -63,7 +63,7 @@ public class UserDao {
     }
 
     public List<User> findByName(String name) {
-        String sql = "SELECT * FROM USERS WHERE name ILIKE ?";
+        String sql = "SELECT * FROM USERS WHERE username ILIKE ?";
         return jdbcTemplate.query(sql, new UserMapper(), "%" + name + "%");
     }
 

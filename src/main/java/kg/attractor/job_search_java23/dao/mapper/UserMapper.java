@@ -11,7 +11,7 @@ public class UserMapper implements RowMapper<User> {
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
         return User.builder()
                 .id(rs.getInt("id"))
-                .username(rs.getString("name"))
+                .username(rs.getString("username"))
                 .email(rs.getString("email"))
                 .phone(rs.getString("phone"))
                 .profileImageUrl(rs.getString("profile_image_url"))
