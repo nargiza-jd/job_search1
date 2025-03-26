@@ -49,13 +49,17 @@ public class UserDao {
     }
 
     public int createAndReturnId(User user) {
-        String sql = "INSERT INTO USERS(username, password) VALUES (?, ?)";
+        String sql = "INSERT INTO USERS(username, password, email, phone, profile_image_url, role) VALUES (?, ?, ?, ?, ?, ?)";
 
         jdbcTemplate.update(
                 con -> {
                     PreparedStatement ps = con.prepareStatement(sql, new String[]{"id"});
                     ps.setString(1, user.getUsername());
                     ps.setString(2, user.getPassword());
+                    ps.setString(3, user.getEmail());
+                    ps.setString(4, user.getPhone());
+                    ps.setString(5, user.getProfileImageUrl());
+                    ps.setString(6, user.getRole());
                     return ps;
                 }, keyHolder
         );
