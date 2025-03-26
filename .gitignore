@@ -31,15 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-
-logs/
-*.log
-*.gz
-
-db/
-
-# Ignore H2 DB lock files
-db/*.lock.db
-db/*.mv.db
-db/*.trace.db

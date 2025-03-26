@@ -17,12 +17,12 @@ public class VacancyDao {
     private final JdbcTemplate jdbcTemplate;
 
     public List<Vacancy> getVacancies() {
-        String sql = "select * from vacancies";
+        String sql = "SELECT * FROM VACANCIES";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Vacancy.class));
     }
 
     public Optional<Vacancy> getVacancyById(int id) {
-        String sql = "select * from vacancies where id = ?";
+        String sql = "SELECT * FROM VACANCIES WHERE id = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
                         jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Vacancy.class), id)
@@ -31,17 +31,17 @@ public class VacancyDao {
     }
 
     public void addVacancy(Vacancy vacancy) {
-        String sql = "INSERT INTO vacancies (title, description, company, location, salary) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO VACANCIES (title, description, company, location, salary) VALUES (?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql, vacancy.getTitle(), vacancy.getDescription(), vacancy.getCompany(), vacancy.getLocation(), vacancy.getSalary());
     }
 
     public void updateVacancy(Vacancy vacancy) {
-        String sql = "UPDATE vacancies SET title = ?, description = ?, company = ?, location = ?, salary = ? WHERE id = ?";
+        String sql = "UPDATE VACANCIES SET title = ?, description = ?, company = ?, location = ?, salary = ? WHERE id = ?";
         jdbcTemplate.update(sql, vacancy.getTitle(), vacancy.getDescription(), vacancy.getCompany(), vacancy.getLocation(), vacancy.getSalary(), vacancy.getId());
     }
 
     public void deleteVacancyById(int id) {
-        String sql = "DELETE FROM vacancies WHERE id = ?";
+        String sql = "DELETE FROM VACANCIES WHERE id = ?";
         jdbcTemplate.update(sql, id);
     }
 }
