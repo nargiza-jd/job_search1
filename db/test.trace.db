@@ -1,0 +1,18 @@
+2025-03-26 13:10:57.875985+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VACANCIES" not found (this database is empty); SQL statement:
+select * from vacancies [42104-232]
+2025-03-26 13:12:20.670114+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VACANCIES" not found (this database is empty); SQL statement:
+select * from vacancies [42104-232]
+2025-03-26 13:43:26.512530+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "DATABASECHANGELOGLOCK" не найдена
+Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42102-232]
+2025-03-26 13:46:33.032782+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "RESUMES" не найдена
+Table "RESUMES" not found; SQL statement:
+SELECT * FROM resumes [42102-232]
+2025-03-26 13:46:52.243575+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "RESUMES" не найдена
+Table "RESUMES" not found; SQL statement:
+SELECT * FROM resumes [42102-232]

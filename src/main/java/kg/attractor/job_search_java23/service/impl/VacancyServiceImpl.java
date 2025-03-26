@@ -1,7 +1,6 @@
 package kg.attractor.job_search_java23.service.impl;
 
 import kg.attractor.job_search_java23.dao.VacancyDao;
-import kg.attractor.job_search_java23.dto.UserDto;
 import kg.attractor.job_search_java23.dto.VacancyDto;
 import kg.attractor.job_search_java23.exceptions.VacancyNotFoundException;
 import kg.attractor.job_search_java23.model.Vacancy;
@@ -32,7 +31,7 @@ public class VacancyServiceImpl implements VacancyService {
                         .experienceFrom(v.getExperienceFrom())
                         .experienceTo(v.getExperienceTo())
                         .published(v.isPublished())
-                        .employer(userService.getUserById(Integer.parseInt(String.valueOf(v.getCompanyId()))))
+                        .employer(userService.getUserById(v.getCompanyId()))
                         .build())
                 .toList();
     }
@@ -42,6 +41,7 @@ public class VacancyServiceImpl implements VacancyService {
         int id = Integer.parseInt(vacancyId);
         Vacancy vacancy = vacancyDao.getVacancyById(id)
                 .orElseThrow(VacancyNotFoundException::new);
+
         return VacancyDto.builder()
                 .id(vacancy.getId())
                 .title(vacancy.getTitle())
@@ -51,15 +51,14 @@ public class VacancyServiceImpl implements VacancyService {
                 .experienceFrom(vacancy.getExperienceFrom())
                 .experienceTo(vacancy.getExperienceTo())
                 .published(vacancy.isPublished())
-                .employer(userService.getUserById(Integer.parseInt(String.valueOf(vacancy.getCompanyId()))))
+                .employer(userService.getUserById(vacancy.getCompanyId()))
                 .build();
     }
 
     @Override
     public void createVacancy(VacancyDto vacancyDto) {
-        List<Vacancy> vacancies = vacancyDao.getVacancies();
-        vacancies.add(Vacancy.builder()
-                .id(vacancies.size() + 1)
+        Vacancy vacancy = Vacancy.builder()
+                .id(vacancyDao.getVacancies().size() + 1)
                 .title(vacancyDto.getTitle())
                 .description(vacancyDto.getDescription())
                 .salary(vacancyDto.getSalary())
@@ -68,6 +67,8 @@ public class VacancyServiceImpl implements VacancyService {
                 .experienceTo(vacancyDto.getExperienceTo())
                 .published(vacancyDto.isPublished())
                 .companyId(vacancyDto.getEmployer().getId())
-                .build());
+                .build();
+
+        vacancyDao.addVacancy(vacancy);
     }
 }
