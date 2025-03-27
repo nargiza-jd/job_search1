@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 
 public class UserDto {
-    private int id;
+    private Integer id;
 
     @NotBlank(message = "Имя пользователя не должно быть пустым")
     private String username;

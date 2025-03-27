@@ -49,7 +49,11 @@ public class UserServiceImpl implements UserService {
     public void addUser(UserDto userDto) {
         User user = User.builder()
                 .username(userDto.getUsername())
-                .password("default") 
+                .email(userDto.getEmail())
+                .password(userDto.getPassword()) // или с encode, если есть security
+                .phone(userDto.getPhone())
+                .profileImageUrl(userDto.getProfileImageUrl())
+                .role(userDto.getRole())
                 .build();
         userDao.create(user);
     }
@@ -58,7 +62,11 @@ public class UserServiceImpl implements UserService {
     public int createUserAndReturnId(UserDto userDto) {
         User user = User.builder()
                 .username(userDto.getUsername())
-                .password("default")
+                .email(userDto.getEmail())
+                .password(userDto.getPassword())
+                .phone(userDto.getPhone())
+                .profileImageUrl(userDto.getProfileImageUrl())
+                .role(userDto.getRole())
                 .build();
         return userDao.createAndReturnId(user);
     }

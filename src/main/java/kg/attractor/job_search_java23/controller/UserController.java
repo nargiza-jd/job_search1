@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @PostMapping
-    public HttpStatus createUser(@RequestBody @Valid UserDto userDto) {
+    public HttpStatus createUser(@Valid UserDto userDto) {
         userService.addUser(userDto);
         return HttpStatus.CREATED;
     }
