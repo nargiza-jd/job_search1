@@ -35,3 +35,4 @@ logs/spring.log
 
 /db/*.lock.db
 /db/*.mv.db
+db/test.trace.db
