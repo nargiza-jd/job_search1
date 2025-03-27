@@ -33,5 +33,5 @@ build/
 .vscode/
 logs/spring.log
 
-db/test.lock.db
-db/test.mv.db
+/db/*.lock.db
+/db/*.mv.db
