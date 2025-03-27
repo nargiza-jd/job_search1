@@ -1,5 +1,6 @@
 package kg.attractor.job_search_java23.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,5 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AvatarUploadDto {
+    @NotNull(message = "Файл не должен быть пустым")
     private MultipartFile file;
 }

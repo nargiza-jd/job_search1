@@ -50,6 +50,8 @@
               - column: { name: title, type: varchar(255) }
               - column: { name: description, type: varchar(500) }
               - column: { name: salary, type: int }
+              - column: { name: company, type: varchar(255), constraints: { nullable: false } }
+              - column: { name: location, type: varchar(255), constraints: { nullable: false } }
               - column: { name: category, type: varchar(100) }
               - column: { name: experience_from, type: int }
               - column: { name: experience_to, type: int }

@@ -1,12 +1,15 @@
 package kg.attractor.job_search_java23.controller;
 
+import jakarta.validation.Valid;
 import kg.attractor.job_search_java23.dto.UserDto;
 import kg.attractor.job_search_java23.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("users")
@@ -26,13 +29,18 @@ public class UserController {
     }
 
     @PostMapping
-    public HttpStatus createUser(@RequestBody UserDto userDto) {
+    public HttpStatus createUser(@Valid UserDto userDto) {
         userService.addUser(userDto);
         return HttpStatus.CREATED;
     }
 
     @PostMapping("withId")
-    public int createUserAndReturnId(@RequestBody UserDto userDto) {
+    public int createUserAndReturnId(@RequestBody @Valid UserDto userDto) {
         return userService.createUserAndReturnId(userDto);
     }
+
+//    @ExceptionHandler(NoSuchElementException.class)
+//    private ErrorResponse handleNoSuchElementException(NoSuchElementException e) {
+//        return ErrorResponse.builder(e, HttpStatus.NO_CONTENT, e.getMessage()).build();
+//    }
 }
