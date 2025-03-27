@@ -35,6 +35,12 @@ public class VacancyDto {
 
     private boolean published;
 
-    @NotNull(message = "Работодатель не должен быть пустым")
-    private UserDto employer;
+    @NotBlank(message = "Компания не должна быть пустой")
+    private String company;
+
+    @NotBlank(message = "Локация не должна быть пустой")
+    private String location;
+
+    @NotNull(message = "Идентификатор работодателя не должен быть пустым")
+    private Integer companyId;
 }

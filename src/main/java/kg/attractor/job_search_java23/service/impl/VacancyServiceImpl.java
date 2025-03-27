@@ -2,73 +2,65 @@ package kg.attractor.job_search_java23.service.impl;
 
 import kg.attractor.job_search_java23.dao.VacancyDao;
 import kg.attractor.job_search_java23.dto.VacancyDto;
-import kg.attractor.job_search_java23.exceptions.VacancyNotFoundException;
 import kg.attractor.job_search_java23.model.Vacancy;
-import kg.attractor.job_search_java23.service.UserService;
 import kg.attractor.job_search_java23.service.VacancyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class VacancyServiceImpl implements VacancyService {
 
     private final VacancyDao vacancyDao;
-    private final UserService userService;
 
     @Override
     public List<VacancyDto> getAllVacancies() {
-        List<Vacancy> vacancies = vacancyDao.getVacancies();
-        return vacancies.stream()
-                .map(v -> VacancyDto.builder()
-                        .id(v.getId())
-                        .title(v.getTitle())
-                        .description(v.getDescription())
-                        .salary(v.getSalary())
-                        .category(v.getCategory())
-                        .experienceFrom(v.getExperienceFrom())
-                        .experienceTo(v.getExperienceTo())
-                        .published(v.isPublished())
-                        .employer(userService.getUserById(v.getCompanyId()))
-                        .build())
-                .toList();
+        return vacancyDao.getVacancies().stream()
+                .map(this::mapToDto)
+                .collect(Collectors.toList());
     }
 
     @Override
     public VacancyDto getVacancyById(String vacancyId) {
-        int id = Integer.parseInt(vacancyId);
-        Vacancy vacancy = vacancyDao.getVacancyById(id)
-                .orElseThrow(VacancyNotFoundException::new);
+        return vacancyDao.getVacancyById(Integer.parseInt(vacancyId))
+                .map(this::mapToDto)
+                .orElse(null);
+    }
 
+    @Override
+    public void createVacancy(VacancyDto dto) {
+        Vacancy vacancy = Vacancy.builder()
+                .title(dto.getTitle())
+                .description(dto.getDescription())
+                .salary(dto.getSalary())
+                .category(dto.getCategory())
+                .company(dto.getCompany())
+                .location(dto.getLocation())
+                .experienceFrom(dto.getExperienceFrom())
+                .experienceTo(dto.getExperienceTo())
+                .published(dto.isPublished())
+                .companyId(dto.getCompanyId())
+                .build();
+
+        vacancyDao.save(vacancy);
+    }
+
+    private VacancyDto mapToDto(Vacancy vacancy) {
         return VacancyDto.builder()
                 .id(vacancy.getId())
                 .title(vacancy.getTitle())
                 .description(vacancy.getDescription())
                 .salary(vacancy.getSalary())
                 .category(vacancy.getCategory())
+                .company(vacancy.getCompany())
+                .location(vacancy.getLocation())
                 .experienceFrom(vacancy.getExperienceFrom())
                 .experienceTo(vacancy.getExperienceTo())
                 .published(vacancy.isPublished())
-                .employer(userService.getUserById(vacancy.getCompanyId()))
+                .companyId(vacancy.getCompanyId())
                 .build();
-    }
-
-    @Override
-    public void createVacancy(VacancyDto vacancyDto) {
-        Vacancy vacancy = Vacancy.builder()
-                .id(vacancyDao.getVacancies().size() + 1)
-                .title(vacancyDto.getTitle())
-                .description(vacancyDto.getDescription())
-                .salary(vacancyDto.getSalary())
-                .category(vacancyDto.getCategory())
-                .experienceFrom(vacancyDto.getExperienceFrom())
-                .experienceTo(vacancyDto.getExperienceTo())
-                .published(vacancyDto.isPublished())
-                .companyId(vacancyDto.getEmployer().getId())
-                .build();
-
-        vacancyDao.addVacancy(vacancy);
     }
 }

@@ -17,12 +17,12 @@ public class VacancyDao {
     private final JdbcTemplate jdbcTemplate;
 
     public List<Vacancy> getVacancies() {
-        String sql = "SELECT * FROM VACANCIES";
+        String sql = "SELECT * FROM vacancies";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Vacancy.class));
     }
 
     public Optional<Vacancy> getVacancyById(int id) {
-        String sql = "SELECT * FROM VACANCIES WHERE id = ?";
+        String sql = "SELECT * FROM vacancies WHERE id = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
                         jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Vacancy.class), id)
@@ -30,18 +30,64 @@ public class VacancyDao {
         );
     }
 
-    public void addVacancy(Vacancy vacancy) {
-        String sql = "INSERT INTO VACANCIES (title, description, company, location, salary) VALUES (?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, vacancy.getTitle(), vacancy.getDescription(), vacancy.getCompany(), vacancy.getLocation(), vacancy.getSalary());
+    public void save(Vacancy vacancy) {
+        String sql = """
+            INSERT INTO vacancies (
+                title, description, salary, category,
+                company, location, experience_from, experience_to,
+                published, company_id
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """;
+
+        jdbcTemplate.update(
+                sql,
+                vacancy.getTitle(),
+                vacancy.getDescription(),
+                vacancy.getSalary(),
+                vacancy.getCategory(),
+                vacancy.getCompany(),
+                vacancy.getLocation(),
+                vacancy.getExperienceFrom(),
+                vacancy.getExperienceTo(),
+                vacancy.isPublished(),
+                vacancy.getCompanyId()
+        );
     }
 
     public void updateVacancy(Vacancy vacancy) {
-        String sql = "UPDATE VACANCIES SET title = ?, description = ?, company = ?, location = ?, salary = ? WHERE id = ?";
-        jdbcTemplate.update(sql, vacancy.getTitle(), vacancy.getDescription(), vacancy.getCompany(), vacancy.getLocation(), vacancy.getSalary(), vacancy.getId());
+        String sql = """
+            UPDATE vacancies SET
+                title = ?,
+                description = ?,
+                salary = ?,
+                category = ?,
+                company = ?,
+                location = ?,
+                experience_from = ?,
+                experience_to = ?,
+                published = ?,
+                company_id = ?
+            WHERE id = ?
+        """;
+
+        jdbcTemplate.update(
+                sql,
+                vacancy.getTitle(),
+                vacancy.getDescription(),
+                vacancy.getSalary(),
+                vacancy.getCategory(),
+                vacancy.getCompany(),
+                vacancy.getLocation(),
+                vacancy.getExperienceFrom(),
+                vacancy.getExperienceTo(),
+                vacancy.isPublished(),
+                vacancy.getCompanyId(),
+                vacancy.getId()
+        );
     }
 
     public void deleteVacancyById(int id) {
-        String sql = "DELETE FROM VACANCIES WHERE id = ?";
+        String sql = "DELETE FROM vacancies WHERE id = ?";
         jdbcTemplate.update(sql, id);
     }
 }
