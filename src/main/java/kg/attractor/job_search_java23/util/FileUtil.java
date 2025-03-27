@@ -4,8 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import kg.attractor.job_search_java23.model.Resume;
-import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -24,12 +22,9 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Service
-@RequiredArgsConstructor
 public class FileUtil {
 
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -38,48 +33,58 @@ public class FileUtil {
 
     public List<Resume> getResumes(String path) {
         Type listType = new TypeToken<Map<String, List<Resume>>>() {}.getType();
-        try (Reader reader = new FileReader("data" + path)) {
+        try (Reader reader = new FileReader(UPLOAD_DIR + path)) {
             Map<String, List<Resume>> resumes = gson.fromJson(reader, listType);
-            return resumes.get("resumes");
+            return resumes.getOrDefault("resumes", List.of());
         } catch (IOException e) {
             e.printStackTrace();
             return List.of();
         }
     }
 
-    @SneakyThrows
     public String saveUploadFile(MultipartFile file, String subDir) {
         String uuidFile = UUID.randomUUID().toString();
         String resultFileName = uuidFile + "_" + file.getOriginalFilename();
 
-        Path pathDir = Paths.get(UPLOAD_DIR + subDir);
-        Files.createDirectories(pathDir);
+        try {
+            Path pathDir = Paths.get(UPLOAD_DIR + subDir);
+            Files.createDirectories(pathDir);
 
-        Path filePath = Paths.get(pathDir + "/" + resultFileName);
-        if (!Files.exists(filePath)) {
-            Files.createFile(filePath);
-        }
-        try (OutputStream os = Files.newOutputStream(filePath)) {
-            os.write(file.getBytes());
+            Path filePath = pathDir.resolve(resultFileName);
+            if (!Files.exists(filePath)) {
+                Files.createFile(filePath);
+            }
+
+            try (OutputStream os = Files.newOutputStream(filePath)) {
+                os.write(file.getBytes());
+            }
+
+            return resultFileName;
+
         } catch (IOException e) {
             e.printStackTrace();
+            throw new RuntimeException("Ошибка при сохранении файла: " + e.getMessage(), e);
         }
-
-        return resultFileName;
     }
 
-    @SneakyThrows
     public ResponseEntity<?> getOutputFile(String filename, String subDir, MediaType mediaType) {
+        Path filePath = Paths.get(UPLOAD_DIR + subDir + filename);
+
         try {
-            byte[] data = Files.readAllBytes(Paths.get(UPLOAD_DIR + subDir + filename));
+            byte[] data = Files.readAllBytes(filePath);
             Resource resource = new ByteArrayResource(data);
+
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
                     .contentLength(resource.contentLength())
                     .contentType(mediaType)
                     .body(resource);
+
         } catch (NoSuchFileException e) {
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("File not found");
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Файл не найден: " + filename);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ошибка при чтении файла");
         }
     }
 }
