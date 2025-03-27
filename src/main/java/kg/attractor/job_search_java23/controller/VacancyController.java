@@ -1,5 +1,6 @@
 package kg.attractor.job_search_java23.controller;
 
+import jakarta.validation.Valid;
 import kg.attractor.job_search_java23.dto.VacancyDto;
 import kg.attractor.job_search_java23.model.Vacancy;
 import kg.attractor.job_search_java23.service.VacancyService;
@@ -28,7 +29,7 @@ public class VacancyController {
     }
 
     @PostMapping
-    public ResponseEntity<?> addVacancy(@RequestBody VacancyDto vacancyDto) {
+    public ResponseEntity<?> addVacancy(@RequestBody @Valid VacancyDto vacancyDto) {
         vacancyService.createVacancy(vacancyDto);
         return ResponseEntity.status(201).build();
     }
