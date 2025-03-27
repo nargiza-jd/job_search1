@@ -32,3 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 logs/spring.log
+
+db/test.lock.db
+db/test.mv.db
