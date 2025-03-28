@@ -17,12 +17,12 @@ public class ResponseDao {
     private final JdbcTemplate jdbcTemplate;
 
     public List<Response> getResponses() {
-        String sql = "SELECT * FROM RESPONSE";
+        String sql = "SELECT * FROM response";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Response.class));
     }
 
     public Optional<Response> getResponseById(int id) {
-        String sql = "SELECT * FROM RESPONSE WHERE id = ?";
+        String sql = "SELECT * FROM response WHERE id = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
                         jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Response.class), id)
@@ -30,13 +30,22 @@ public class ResponseDao {
         );
     }
 
-    public void addResponse(Response response) {
-        String sql = "INSERT INTO RESPONSE (user_id, vacancy_id, message) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, response.getUserId(), response.getVacancyId(), response.getMessage());
+    public void save(Response response) {
+        String sql = """
+            INSERT INTO response (resume_id, vacancy_id, applicant_id, employer_id)
+            VALUES (?, ?, ?, ?)
+        """;
+        jdbcTemplate.update(
+                sql,
+                response.getResumeId(),
+                response.getVacancyId(),
+                response.getApplicantId(),
+                response.getEmployerId()
+        );
     }
 
     public void deleteResponseById(int id) {
-        String sql = "DELETE FROM RESPONSE WHERE id = ?";
+        String sql = "DELETE FROM response WHERE id = ?";
         jdbcTemplate.update(sql, id);
     }
 }

@@ -71,7 +71,11 @@
         - createTable:
             tableName: response
             columns:
-              - column: { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true } }
+              - column: { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: applicant_id, type: int }
+              - column: { name: employer_id, type: int }
+              - column: { name: user_id, type: int }
+              - column: { name: message, type: varchar(500) }
               - column:
                   name: resume_id
                   type: int
@@ -86,8 +90,6 @@
                     nullable: false
                     foreignKeyName: fk_response_vacancy
                     references: vacancies(id)
-              - column: { name: applicant_id, type: int }
-              - column: { name: employer_id, type: int }
 
   - changeSet:
       id: 005-create-education

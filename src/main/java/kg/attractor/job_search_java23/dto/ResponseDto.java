@@ -21,4 +21,6 @@ public class ResponseDto {
 
     private Integer applicantId;
     private Integer employerId;
+    @NotNull(message = "message не должен быть пустым")
+    private String message;
 }
