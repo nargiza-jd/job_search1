@@ -18,6 +18,6 @@ INSERT INTO experience (id, resume_id, company, position, responsibilities, star
                                                                                                       (1, 1, 'Tech Solutions', 'Junior Java Developer', 'Backend API development using Spring Boot', 2020, 2022),
                                                                                                       (2, 2, 'Creative Agency', 'UX Intern', 'Assisted in designing user flows and mockups', 2021, 2022);
 
-INSERT INTO response (resume_id, vacancy_id) VALUES
-                                                 (1, 1),
-                                                 (2, 2);
+INSERT INTO response (resume_id, vacancy_id, user_id, applicant_id, employer_id, message) VALUES
+                                                                                              (1, 1, 1, 1, 2, 'I am interested in this position'),
+                                                                                              (2, 2, 1, 1, 2, 'Looking forward to hearing from you');
