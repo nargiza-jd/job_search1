@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: 005_create_educations_table
+      id: 005_create_education_info_table
       author: nargiza-jd
       changes:
         - createTable:
-            tableName: educations
+            tableName: education_info
             columns:
               - column:
                   name: id
