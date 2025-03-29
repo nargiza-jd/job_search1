@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 011_create_contact_types_table
+      author: nargiza-jd
+      changes:
+        - createTable:
+            tableName: contact_types
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(255)
