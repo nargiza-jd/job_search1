@@ -4,7 +4,7 @@ databaseChangeLog:
       author: nargiza-jd
       changes:
         - createTable:
-            tableName: resumes
+            tableName: educations
             columns:
               - column:
                   name: id

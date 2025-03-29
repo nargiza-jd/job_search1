@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006_create_responded_applicants_table
+      author: nargiza-jd
+      changes:
+        - createTable:
+            tableName: responded_applicants
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: confirmation
+                  type: boolean
