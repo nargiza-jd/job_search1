@@ -1,19 +1,21 @@
 databaseChangeLog:
   - changeSet:
-      id: 007_created_role_table
+      id: 008_create_messages_table
       author: nargiza-jd
       changes:
         - createTable:
-            tableName: role
+            tableName: messages
             columns:
               - column:
                   name: id
-                  type: long
+                  type: int
                   autoIncrement: true
                   constraints:
-                    nullable: false
                     primaryKey: true
+                    nullable: false
               - column:
-                  name: role
-                  type: varchar(50)
-
+                  name: content
+                  type: varchar(255)
+              - column:
+                  name: timestamp
+                  type: timestamp
