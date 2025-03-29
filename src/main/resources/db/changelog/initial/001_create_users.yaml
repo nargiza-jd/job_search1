@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 001_create_user_table
+      id: 001_create_users_table
       author: nargiza-jd
       changes:
         - createTable:
@@ -11,31 +11,35 @@ databaseChangeLog:
                   type: int
                   autoIncrement: true
                   constraints:
-                    nullable: false
                     primaryKey: true
+                    nullable: false
               - column:
                   name: username
-                  type: varchar(50)
+                  type: varchar(200)
                   constraints:
                     nullable: false
+              - column:
+                  name: surname
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: int
               - column:
                   name: email
                   type: varchar(100)
                   constraints:
                     nullable: false
+                    unique: true
               - column:
                   name: password
                   type: varchar(255)
                   constraints:
                     nullable: false
               - column:
-                  name: phone
+                  name: phone_number
                   type: varchar(20)
               - column:
-                  name: profile_image_url
-                  type: varchar(255)
-              - column:
-                  name: role
-                  type: varchar(20)
-                  constraints:
-                    nullable: false
+                  name: avatar
+                  type: varchar(355)

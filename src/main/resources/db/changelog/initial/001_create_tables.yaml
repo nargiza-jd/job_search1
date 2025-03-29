@@ -7,7 +7,8 @@
             tableName: users
             columns:
               - column: { name: id, type: int, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: username, type: varchar(255), constraints: { nullable: false } }
+              - column: { name: username, type: varchar(50), constraints: { nullable: false } }
+              - column: { name: surname, type: varchar(50), constraints: { nullable: false } }
               - column: { name: email, type: varchar(255), constraints: { nullable: false } }
               - column: { name: password, type: varchar(255) }
               - column: { name: phone, type: varchar(50) }
@@ -105,6 +106,7 @@
                   constraints:
                     foreignKeyName: fk_education_resume
                     references: resume(id)
+                    deleteCascade: true
               - column: { name: institution, type: varchar(255) }
               - column: { name: course, type: varchar(255) }
               - column: { name: start_year, type: int }
@@ -124,6 +126,7 @@
                   constraints:
                     foreignKeyName: fk_experience_resume
                     references: resume(id)
+                    deleteCascade: true
               - column: { name: company, type: varchar(255) }
               - column: { name: position, type: varchar(255) }
               - column: { name: responsibilities, type: varchar(500) }
