@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 017 add column to table contacts_info
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: contacts_info
+            columns:
+              - column:
+                  name: type_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_type_id
+                    references: contact_types(id)
+                    deleteCascade: true
+              - column:
+                  name: resume_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_contact_info_resume_id
+                    references: resumes(id)
+                    deleteCascade: true
