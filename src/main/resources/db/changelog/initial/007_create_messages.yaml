@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007_create_messages_table
+      author: nargiza-jd
+      changes:
+        - createTable:
+            tableName: messages
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: content
+                  type: varchar(255)
+              - column:
+                  name: timestamp
+                  type: timestamp
