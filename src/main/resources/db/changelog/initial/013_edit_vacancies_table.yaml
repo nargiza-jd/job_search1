@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 013 add column to table vacancies
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: vacancies
+            columns:
+              - column:
+                  name: category_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_categories_id
+                    references: categories(id)
+                    deleteCascade: true
+              - column:
+                  name: author_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_user_id
+                    references: users(id)
+                    deleteCascade: true

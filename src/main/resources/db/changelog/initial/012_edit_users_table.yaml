@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 006 add column to table user
+      id: 012 add column to table user
       author: nargiza-jd
       changes:
         - addColumn:
