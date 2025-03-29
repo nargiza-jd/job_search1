@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005_create_educations_table
+      author: nargiza-jd
+      changes:
+        - createTable:
+            tableName: resumes
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: institution
+                  type: varchar(255)
+              - column:
+                  name: program
+                  type: varchar(255)
+              - column:
+                  name: start_date
+                  type: date
+              - column:
+                  name: end_date
+                  type: date
+              - column:
+                  name: degree
+                  type: varchar(100)
