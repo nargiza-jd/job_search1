@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 009_create_contacts_info_table
+      author: nargiza-jd
+      changes:
+        - createTable:
+            tableName: contacts_info
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: value
+                  type: varchar(500)
