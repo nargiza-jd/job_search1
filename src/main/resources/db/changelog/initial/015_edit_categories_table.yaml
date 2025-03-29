@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 015 edit column  name in categories table
+      author: nargiza-jd
+      changes:
+        - dropColumn:
+            tableName: categories
+            columns:
+              - column:
+                  name: username
+        - addColumn:
+            tableName: categories
+            columns:
+              - column:
+                  name: category_name
+                  type: varchar(200)

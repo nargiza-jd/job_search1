@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 014 add column to table responded_applicants
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: responded_applicants
+            columns:
+              - column:
+                  name: resume_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_resumes_id
+                    references: resumes(id)
+                    deleteCascade: true
+              - column:
+                  name: vacancy_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_vacancies_id
+                    references: vacancies(id)
+                    deleteCascade: true
