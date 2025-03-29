@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 015 add column to table resumes
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: resumes
+            columns:
+              - column:
+                  name: applicant_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_applicant_id
+                    references: users(id)
+                    deleteCascade: true
+              - column:
+                  name: category_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_category_id
+                    deleteCascade: true
