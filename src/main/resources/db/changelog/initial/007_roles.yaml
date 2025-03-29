@@ -1,18 +1,19 @@
 databaseChangeLog:
   - changeSet:
-      id: 006_create_responded_applicants_table
+      id: 005 created role table
       author: nargiza-jd
       changes:
         - createTable:
-            tableName: responded_applicants
+            tableName: role
             columns:
               - column:
                   name: id
-                  type: int
+                  type: long
                   autoIncrement: true
                   constraints:
-                    primaryKey: true
                     nullable: false
+                    primaryKey: true
               - column:
-                  name: confirmation
-                  type: boolean
+                  name: role
+                  type: varchar(50)
+
