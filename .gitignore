@@ -32,3 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 logs/spring.log
+# H2 database
+db/*.db
+
+# Logs
+logs/
