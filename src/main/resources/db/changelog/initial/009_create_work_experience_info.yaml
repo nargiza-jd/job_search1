@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 009_create_work_experience_info_table
+      author: nargiza-jd
+      changes:
+        - createTable:
+            tableName: work_experience_info
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: years
+                  type: int
+              - column:
+                  name: company_name
+                  type: varchar(255)
+              - column:
+                  name: position
+                  type: varchar(255)
+              - column:
+                  name: responsibilities
+                  type: varchar(500)
