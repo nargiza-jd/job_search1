@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 018 add column to table education_info table
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: education_info
+            columns:
+              - column:
+                  name: education_info_resume_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_education_info_resume_id
+                    references: resumes(id)
+                    deleteCascade: true
