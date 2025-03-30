@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 020 add column to table messages table
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: messages
+            columns:
+              - column:
+                  name: responded_applicants_messages_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_responded_applicants_messages_id
+                    references: responded_applicants(id)
+                    deleteCascade: true
