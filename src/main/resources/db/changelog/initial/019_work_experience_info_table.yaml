@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 019 add column to table work_experience_info table
+      author: nargiza-jd
+      changes:
+        - addColumn:
+            tableName: work_experience_info
+            columns:
+              - column:
+                  name: work_experience_info_resume_id
+                  type: long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_work_experience_info_resume_id
+                    references: resumes(id)
+                    deleteCascade: true
