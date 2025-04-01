@@ -7,6 +7,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,5 +52,22 @@ public class ResumeDao {
     public void deleteResumeById(int id) {
         String sql = "DELETE FROM RESUMES WHERE id = ?";
         jdbcTemplate.update(sql, id);
+    }
+
+    public void save(Resume resume) {
+        String sql = """
+        INSERT INTO resumes (username, salary, is_active, created_date, update_time, applicant_id, category)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    """;
+
+        jdbcTemplate.update(sql,
+                resume.getTitle(),
+                resume.getExpectedSalary(),
+                resume.isPublished(),
+                Timestamp.valueOf(LocalDateTime.now()),
+                Timestamp.valueOf(LocalDateTime.now()),
+                resume.getApplicantId(),
+                resume.getCategory()
+        );
     }
 }

@@ -20,21 +20,8 @@ public class ResumeServiceImpl implements ResumeService {
 
     @Override
     public List<ResumeDto> getAllResumes() {
-        List<Resume> resumes = resumeDao.getResumes();
-        return resumes.stream()
-                .map(r -> ResumeDto.builder()
-                        .id(r.getId())
-                        .title(r.getTitle())
-                        .category(r.getCategory())
-                        .expectedSalary(r.getExpectedSalary())
-                        .telegram(r.getTelegram())
-                        .email(r.getEmail())
-                        .phone(r.getPhone())
-                        .facebook(r.getFacebook())
-                        .linkedin(r.getLinkedin())
-                        .published(r.isPublished())
-                        .user(userService.getUserById(r.getApplicantId()))
-                        .build())
+        return resumeDao.getResumes().stream()
+                .map(this::mapToDto)
                 .toList();
     }
 
@@ -44,27 +31,33 @@ public class ResumeServiceImpl implements ResumeService {
         Resume resume = resumeDao.getResumeById(id)
                 .orElseThrow(ResumeNotFoundException::new);
 
-        return ResumeDto.builder()
-                .id(resume.getId())
-                .title(resume.getTitle())
-                .category(resume.getCategory())
-                .expectedSalary(resume.getExpectedSalary())
-                .telegram(resume.getTelegram())
-                .email(resume.getEmail())
-                .phone(resume.getPhone())
-                .facebook(resume.getFacebook())
-                .linkedin(resume.getLinkedin())
-                .published(resume.isPublished())
-                .user(userService.getUserById(resume.getApplicantId()))
-                .build();
+        return mapToDto(resume);
     }
+
+//    @Override
+//    public void createResume(ResumeDto resumeDto) {
+//        List<Resume> resumes = resumeDao.getResumes();
+//
+//        Resume newResume = Resume.builder()
+//                .id(resumes.size() + 1)
+//                .title(resumeDto.getTitle())
+//                .category(resumeDto.getCategory())
+//                .expectedSalary(resumeDto.getExpectedSalary())
+//                .telegram(resumeDto.getTelegram())
+//                .email(resumeDto.getEmail())
+//                .phone(resumeDto.getPhone())
+//                .facebook(resumeDto.getFacebook())
+//                .linkedin(resumeDto.getLinkedin())
+//                .published(resumeDto.isPublished())
+//                .applicantId(resumeDto.getUser().getId())
+//                .build();
+//
+//        resumes.add(newResume);
+//    }
 
     @Override
     public void createResume(ResumeDto resumeDto) {
-        List<Resume> resumes = resumeDao.getResumes();
-
-        resumes.add(Resume.builder()
-                .id(resumes.size() + 1)
+        Resume resume = Resume.builder()
                 .title(resumeDto.getTitle())
                 .category(resumeDto.getCategory())
                 .expectedSalary(resumeDto.getExpectedSalary())
@@ -75,8 +68,9 @@ public class ResumeServiceImpl implements ResumeService {
                 .linkedin(resumeDto.getLinkedin())
                 .published(resumeDto.isPublished())
                 .applicantId(resumeDto.getUser().getId())
-                .build()
-        );
+                .build();
+
+        resumeDao.save(resume);
     }
 
     @Override
@@ -112,5 +106,21 @@ public class ResumeServiceImpl implements ResumeService {
                 .orElseThrow(ResumeNotFoundException::new);
 
         resumes.remove(resume);
+    }
+
+    private ResumeDto mapToDto(Resume resume) {
+        return ResumeDto.builder()
+                .id(resume.getId())
+                .title(resume.getTitle())
+                .category(resume.getCategory())
+                .expectedSalary(resume.getExpectedSalary())
+                .telegram(resume.getTelegram())
+                .email(resume.getEmail())
+                .phone(resume.getPhone())
+                .facebook(resume.getFacebook())
+                .linkedin(resume.getLinkedin())
+                .published(resume.isPublished())
+                .user(userService.getUserById(resume.getApplicantId()))
+                .build();
     }
 }
