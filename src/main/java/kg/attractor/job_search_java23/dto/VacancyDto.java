@@ -43,4 +43,7 @@ public class VacancyDto {
 
     @NotNull(message = "Идентификатор работодателя не должен быть пустым")
     private Integer companyId;
+
+    @NotNull(message = "Идентификатор автора не должен быть пустым")
+    private Integer authorId;
 }

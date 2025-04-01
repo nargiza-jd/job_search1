@@ -19,6 +19,7 @@ public class Vacancy {
     private int experienceTo;
     private boolean published;
     private int companyId;
+    private int authorId;
 
     @Override
     public String toString() {
