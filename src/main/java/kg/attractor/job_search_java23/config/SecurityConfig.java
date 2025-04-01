@@ -46,14 +46,16 @@ public class SecurityConfig {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         String fetchUsername = """
-                select email, password, enabled 
-                from users 
+                select email, password, enabled
+                from users
                 where email = ?
                 """;
-        String fetchRoles = "select email, role" +
-                "from users u, role r" +
-                "where u.email = ?" +
-                "and u.role_id = r.id = ? ";
+        String fetchRoles = """
+                select email, role
+                from users u, role r
+                where u.email = ?
+                and u.role_id = r.id = ?
+                """;
 
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
