@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import kg.attractor.job_search_java23.dao.mapper.VacancyMapper;
 
 @Component
 @RequiredArgsConstructor
@@ -16,16 +17,17 @@ public class VacancyDao {
 
     private final JdbcTemplate jdbcTemplate;
 
+
     public List<Vacancy> getVacancies() {
         String sql = "SELECT * FROM vacancies";
-        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Vacancy.class));
+        return jdbcTemplate.query(sql, new VacancyMapper());
     }
 
     public Optional<Vacancy> getVacancyById(int id) {
         String sql = "SELECT * FROM vacancies WHERE id = ?";
         return Optional.ofNullable(
                 DataAccessUtils.singleResult(
-                        jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Vacancy.class), id)
+                        jdbcTemplate.query(sql, new VacancyMapper(), id)
                 )
         );
     }

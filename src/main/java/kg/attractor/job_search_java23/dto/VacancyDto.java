@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class VacancyDto {
     private Integer id;
 
-    @NotBlank(message = "Название вакансии не должно быть пустым")
-    private String title;
+    @NotBlank(message = "Имя пользователя не должно быть пустым")
+    private String username;
 
     @NotBlank(message = "Описание не должно быть пустым")
     private String description;
@@ -24,26 +24,17 @@ public class VacancyDto {
     @Min(value = 0, message = "Зарплата не может быть отрицательной")
     private Integer salary;
 
-    @NotBlank(message = "Категория не должна быть пустой")
-    private String category;
-
     @Min(value = 0, message = "Опыт от не может быть отрицательным")
     private Integer experienceFrom;
 
     @Min(value = 0, message = "Опыт до не может быть отрицательным")
     private Integer experienceTo;
 
-    private boolean published;
+    private boolean isActive;
 
-    @NotBlank(message = "Компания не должна быть пустой")
-    private String company;
+    @NotNull(message = "Категория не должна быть пустой")
+    private Integer categoryId;
 
-    @NotBlank(message = "Локация не должна быть пустой")
-    private String location;
-
-    @NotNull(message = "Идентификатор работодателя не должен быть пустым")
-    private Integer companyId;
-
-    @NotNull(message = "Идентификатор автора не должен быть пустым")
+    @NotNull(message = "Автор не должен быть пустым")
     private Integer authorId;
 }

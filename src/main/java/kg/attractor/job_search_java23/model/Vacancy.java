@@ -2,6 +2,8 @@ package kg.attractor.job_search_java23.model;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -9,20 +11,19 @@ import lombok.*;
 @NoArgsConstructor
 public class Vacancy {
     private int id;
-    private String title;
+    private String username;
     private String description;
     private Integer salary;
-    private String category;
-    private String company;
-    private String location;
     private int experienceFrom;
     private int experienceTo;
-    private boolean published;
-    private int companyId;
+    private boolean isActive;
+    private LocalDateTime createdDate;
+    private LocalDateTime updateTime;
+    private int categoryId;
     private int authorId;
 
     @Override
     public String toString() {
-        return String.format("Вакансия: %s (%s) в %s, %s", title, category, company, location);
+        return String.format("Вакансия: %s, зарплата: %s", username, salary);
     }
 }

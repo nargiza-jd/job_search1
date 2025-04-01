@@ -20,8 +20,21 @@ public class VacancyServiceImpl implements VacancyService {
     @Override
     public List<VacancyDto> getAllVacancies() {
         return vacancyDao.getVacancies().stream()
-                .map(this::mapToDto)
-                .collect(Collectors.toList());
+                .map(v -> VacancyDto.builder()
+                        .id(v.getId())
+                        .title(v.getTitle())
+                        .description(v.getDescription())
+                        .salary(v.getSalary())
+                        .category(v.getCategory())
+                        .experienceFrom(v.getExperienceFrom())
+                        .experienceTo(v.getExperienceTo())
+                        .published(v.isPublished())
+                        .company(v.getCompany())
+                        .location(v.getLocation())
+                        .companyId(v.getCompanyId())
+                        .authorId(v.getAuthorId())
+                        .build()
+                ).toList();
     }
 
     @Override
