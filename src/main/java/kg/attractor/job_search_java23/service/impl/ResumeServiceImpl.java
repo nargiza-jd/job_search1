@@ -9,6 +9,7 @@ import kg.attractor.job_search_java23.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Service
@@ -34,40 +35,16 @@ public class ResumeServiceImpl implements ResumeService {
         return mapToDto(resume);
     }
 
-//    @Override
-//    public void createResume(ResumeDto resumeDto) {
-//        List<Resume> resumes = resumeDao.getResumes();
-//
-//        Resume newResume = Resume.builder()
-//                .id(resumes.size() + 1)
-//                .title(resumeDto.getTitle())
-//                .category(resumeDto.getCategory())
-//                .expectedSalary(resumeDto.getExpectedSalary())
-//                .telegram(resumeDto.getTelegram())
-//                .email(resumeDto.getEmail())
-//                .phone(resumeDto.getPhone())
-//                .facebook(resumeDto.getFacebook())
-//                .linkedin(resumeDto.getLinkedin())
-//                .published(resumeDto.isPublished())
-//                .applicantId(resumeDto.getUser().getId())
-//                .build();
-//
-//        resumes.add(newResume);
-//    }
-
     @Override
     public void createResume(ResumeDto resumeDto) {
         Resume resume = Resume.builder()
-                .title(resumeDto.getTitle())
-                .category(resumeDto.getCategory())
-                .expectedSalary(resumeDto.getExpectedSalary())
-                .telegram(resumeDto.getTelegram())
-                .email(resumeDto.getEmail())
-                .phone(resumeDto.getPhone())
-                .facebook(resumeDto.getFacebook())
-                .linkedin(resumeDto.getLinkedin())
-                .published(resumeDto.isPublished())
+                .username(resumeDto.getTitle())
+                .salary(resumeDto.getExpectedSalary())
+                .isActive(resumeDto.isPublished())
+                .createdDate(new Timestamp(System.currentTimeMillis()))
+                .updateTime(new Timestamp(System.currentTimeMillis()))
                 .applicantId(resumeDto.getUser().getId())
+                .categoryId(resumeDto.getCategoryId())
                 .build();
 
         resumeDao.save(resume);
@@ -75,51 +52,32 @@ public class ResumeServiceImpl implements ResumeService {
 
     @Override
     public void updateResume(int id, ResumeDto resumeDto) {
-        List<Resume> resumes = resumeDao.getResumes();
-
-        Resume resume = resumes.stream()
-                .filter(r -> r.getId() == id)
-                .findFirst()
+        Resume resume = resumeDao.getResumeById(id)
                 .orElseThrow(ResumeNotFoundException::new);
 
-        resume.setTitle(resumeDto.getTitle());
-        resume.setCategory(resumeDto.getCategory());
-        resume.setExpectedSalary(resumeDto.getExpectedSalary());
-        resume.setTelegram(resumeDto.getTelegram());
-        resume.setEmail(resumeDto.getEmail());
-        resume.setPhone(resumeDto.getPhone());
-        resume.setFacebook(resumeDto.getFacebook());
-        resume.setLinkedin(resumeDto.getLinkedin());
-        resume.setPublished(resumeDto.isPublished());
+        resume.setUsername(resumeDto.getTitle());
+        resume.setSalary(resumeDto.getExpectedSalary());
+        resume.setActive(resumeDto.isPublished());
+        resume.setUpdateTime(new Timestamp(System.currentTimeMillis()));
+        resume.setCategoryId(resumeDto.getCategoryId());
 
-        if (resumeDto.getUser() != null) {
-            resume.setApplicantId(resumeDto.getUser().getId());
-        }
+        resumeDao.updateResume(resume);
     }
 
     @Override
     public void deleteResume(int id) {
-        List<Resume> resumes = resumeDao.getResumes();
-        Resume resume = resumes.stream()
-                .filter(r -> r.getId() == id)
-                .findFirst()
-                .orElseThrow(ResumeNotFoundException::new);
-
-        resumes.remove(resume);
+        resumeDao.deleteResumeById(id);
     }
 
     private ResumeDto mapToDto(Resume resume) {
         return ResumeDto.builder()
                 .id(resume.getId())
-                .title(resume.getTitle())
-                .category(resume.getCategory())
-                .expectedSalary(resume.getExpectedSalary())
-                .telegram(resume.getTelegram())
-                .email(resume.getEmail())
-                .phone(resume.getPhone())
-                .facebook(resume.getFacebook())
-                .linkedin(resume.getLinkedin())
-                .published(resume.isPublished())
+                .title(resume.getUsername())
+                .expectedSalary(resume.getSalary())
+                .published(resume.isActive())
+                .createdDate(resume.getCreatedDate())
+                .updateTime(resume.getUpdateTime())
+                .categoryId(resume.getCategoryId())
                 .user(userService.getUserById(resume.getApplicantId()))
                 .build();
     }

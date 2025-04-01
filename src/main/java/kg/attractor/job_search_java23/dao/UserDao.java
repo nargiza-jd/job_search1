@@ -59,7 +59,7 @@ public class UserDao {
                     ps.setString(3, user.getEmail());
                     ps.setString(4, user.getPhone());
                     ps.setString(5, user.getProfileImageUrl());
-                    ps.setString(6, user.getRole());
+                    ps.setString(6, String.valueOf(user.getRoleId()));
                     return ps;
                 }, keyHolder
         );
@@ -87,6 +87,6 @@ public class UserDao {
 
     public void updateUser(User user) {
         String sql = "UPDATE USERS SET username = ?, email = ?, phone = ?, profile_image_url = ?, password = ?, role = ? WHERE id = ?";
-        jdbcTemplate.update(sql, user.getUsername(), user.getEmail(), user.getPhone(), user.getProfileImageUrl(), user.getPassword(), user.getRole(), user.getId());
+        jdbcTemplate.update(sql, user.getUsername(), user.getEmail(), user.getPhone(), user.getProfileImageUrl(), user.getPassword(), user.getRoleId(), user.getId());
     }
 }

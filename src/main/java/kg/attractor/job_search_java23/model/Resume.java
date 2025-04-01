@@ -9,33 +9,26 @@ import lombok.*;
 @NoArgsConstructor
 public class Resume {
     private int id;
-    private String title;
-    private String category;
-    private String description;
-    private Integer expectedSalary;
-    private String telegram;
-    private String email;
-    private String phone;
-    private String facebook;
-    private String linkedin;
-    private boolean published;
+    private String username;
+    private Integer salary;
+    private boolean isActive;
+    private java.sql.Timestamp createdDate;
+    private java.sql.Timestamp updateTime;
     private Integer applicantId;
+    private Integer categoryId;
 
     @Override
     public String toString() {
         return String.format(
-                "Резюме: <<%s>>%nКатегория: %s%nОписание: %s%nОжидаемая зарплата: %s%nСвязь: %s | %s | %s%nПрофили: fb: %s, linkedin: %s%nПублично: %s%nПользователь ID: %d",
-                title,
-                category,
-                description,
-                expectedSalary,
-                telegram,
-                email,
-                phone,
-                facebook,
-                linkedin,
-                published ? "да" : "нет",
-                applicantId
+                "Резюме #%d%nИмя пользователя: %s%nЗарплата: %s%nАктивно: %s%nДата создания: %s%nОбновлено: %s%nКандидат ID: %d%nКатегория ID: %d",
+                id,
+                username,
+                salary,
+                isActive ? "да" : "нет",
+                createdDate,
+                updateTime,
+                applicantId,
+                categoryId
         );
     }
 }

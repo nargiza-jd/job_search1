@@ -16,10 +16,10 @@ public class User {
     private String password;
     private String phone;
     private String profileImageUrl;
-    private String role;
+    private int roleId;
 
     @Override
     public String toString() {
-        return String.format("Пользователь: %s (%s)", username, role);
+        return String.format("Пользователь: %s (Role ID: %d)", username, roleId);
     }
 }

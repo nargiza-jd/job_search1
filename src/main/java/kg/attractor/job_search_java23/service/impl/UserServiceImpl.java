@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
                         .email(u.getEmail())
                         .phone(u.getPhone())
                         .profileImageUrl(u.getProfileImageUrl())
-                        .role(u.getRole())
+                        .role(String.valueOf(u.getRoleId()))
                         .build())
                 .toList();
     }
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
                 .email(user.getEmail())
                 .phone(user.getPhone())
                 .profileImageUrl(user.getProfileImageUrl())
-                .role(user.getRole())
+                .role(String.valueOf(user.getRoleId()))
                 .build();
     }
 
@@ -50,10 +50,10 @@ public class UserServiceImpl implements UserService {
         User user = User.builder()
                 .username(userDto.getUsername())
                 .email(userDto.getEmail())
-                .password(userDto.getPassword()) // или с encode, если есть security
+                .password(userDto.getPassword())
                 .phone(userDto.getPhone())
                 .profileImageUrl(userDto.getProfileImageUrl())
-                .role(userDto.getRole())
+                .roleId(Integer.parseInt(userDto.getRole()))
                 .build();
         userDao.create(user);
     }
@@ -66,7 +66,7 @@ public class UserServiceImpl implements UserService {
                 .password(userDto.getPassword())
                 .phone(userDto.getPhone())
                 .profileImageUrl(userDto.getProfileImageUrl())
-                .role(userDto.getRole())
+                .roleId(Integer.parseInt(userDto.getRole()))
                 .build();
         return userDao.createAndReturnId(user);
     }

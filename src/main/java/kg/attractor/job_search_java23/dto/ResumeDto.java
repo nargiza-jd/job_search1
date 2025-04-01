@@ -1,17 +1,14 @@
 package kg.attractor.job_search_java23.dto;
 
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import kg.attractor.job_search_java23.model.Education;
-import kg.attractor.job_search_java23.model.Experience;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.sql.Timestamp;
 
 @Data
 @Builder
@@ -20,29 +17,20 @@ import java.util.List;
 public class ResumeDto {
     private Integer id;
 
-    @NotBlank(message = "Название не должно быть пустым")
+    @NotBlank(message = "Имя пользователя не должно быть пустым")
     private String title;
 
-    @NotBlank(message = "Категория не должна быть пустой")
-    private String category;
-
-    @Min(value = 0, message = "Ожидаемая зарплата не может быть отрицательной")
+    @Min(value = 0, message = "Зарплата не может быть отрицательной")
     private Integer expectedSalary;
-
-    private String telegram;
-
-    @Email(message = "Неверный формат email")
-    private String email;
-
-    private String phone;
-    private String facebook;
-    private String linkedin;
 
     private boolean published;
 
+    private Timestamp createdDate;
+    private Timestamp updateTime;
+
+    @NotNull(message = "Категория не должна быть пустой")
+    private Integer categoryId;
+
     @NotNull(message = "Пользователь не должен быть пустым")
     private UserDto user;
-
-    private List<Experience> experienceList;
-    private List<Education> educationList;
 }

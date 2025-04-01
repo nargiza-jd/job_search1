@@ -14,9 +14,9 @@ public class UserMapper implements RowMapper<User> {
                 .username(rs.getString("username"))
                 .email(rs.getString("email"))
                 .password(rs.getString("password"))
-                .phone(rs.getString("phone"))
-                .profileImageUrl(rs.getString("profile_image_url"))
-                .role(rs.getString("role"))
+                .phone(rs.getString("phone_number"))
+                .profileImageUrl(rs.getString("avatar"))
+                .roleId(rs.getInt("role_id"))
                 .build();
     }
 }
