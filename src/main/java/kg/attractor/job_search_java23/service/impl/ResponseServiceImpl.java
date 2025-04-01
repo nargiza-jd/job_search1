@@ -24,8 +24,7 @@ public class ResponseServiceImpl implements ResponseService {
                         .id(r.getId())
                         .resumeId(r.getResumeId())
                         .vacancyId(r.getVacancyId())
-                        .applicantId(r.getApplicantId())
-                        .employerId(r.getEmployerId())
+                        .confirmation(r.isConfirmation())
                         .build())
                 .toList();
     }
@@ -40,20 +39,18 @@ public class ResponseServiceImpl implements ResponseService {
                 .id(response.getId())
                 .resumeId(response.getResumeId())
                 .vacancyId(response.getVacancyId())
-                .applicantId(response.getApplicantId())
-                .employerId(response.getEmployerId())
+                .confirmation(response.isConfirmation())
                 .build();
     }
 
     @Override
     public void createResponse(ResponseDto responseDto) {
-        List<Response> responses = responseDao.getResponses();
-        responses.add(Response.builder()
-                .id(responses.size() + 1)
+        Response response = Response.builder()
                 .resumeId(responseDto.getResumeId())
                 .vacancyId(responseDto.getVacancyId())
-                .applicantId(responseDto.getApplicantId())
-                .employerId(responseDto.getEmployerId())
-                .build());
+                .confirmation(responseDto.isConfirmation())
+                .build();
+
+        responseDao.save(response);
     }
 }
