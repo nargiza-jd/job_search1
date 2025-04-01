@@ -47,20 +47,24 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(UserDto userDto) {
-        User user = User.builder()
-                .username(userDto.getUsername())
-                .email(userDto.getEmail())
-                .password(userDto.getPassword())
-                .phone(userDto.getPhone())
-                .profileImageUrl(userDto.getProfileImageUrl())
-                .roleId(Integer.parseInt(userDto.getRole()))
-                .build();
-        userDao.create(user);
+        setDefaultAvatarIfNeeded(userDto);
+        userDao.create(toUser(userDto));
     }
 
     @Override
     public int createUserAndReturnId(UserDto userDto) {
-        User user = User.builder()
+        setDefaultAvatarIfNeeded(userDto);
+        return userDao.createAndReturnId(toUser(userDto));
+    }
+
+    private void setDefaultAvatarIfNeeded(UserDto userDto) {
+        if (userDto.getProfileImageUrl() == null || userDto.getProfileImageUrl().isEmpty()) {
+            userDto.setProfileImageUrl("user_icon.jpg");
+        }
+    }
+
+    private User toUser(UserDto userDto) {
+        return User.builder()
                 .username(userDto.getUsername())
                 .email(userDto.getEmail())
                 .password(userDto.getPassword())
@@ -68,6 +72,5 @@ public class UserServiceImpl implements UserService {
                 .profileImageUrl(userDto.getProfileImageUrl())
                 .roleId(Integer.parseInt(userDto.getRole()))
                 .build();
-        return userDao.createAndReturnId(user);
     }
 }

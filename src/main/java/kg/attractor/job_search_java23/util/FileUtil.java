@@ -48,7 +48,7 @@ public class FileUtil {
     }
 
     public ResponseEntity<?> getOutputFile(String filename, String subDir, MediaType mediaType) {
-        Path filePath = Paths.get(UPLOAD_DIR + subDir + filename);
+        Path filePath = Paths.get(UPLOAD_DIR, subDir, filename);
 
         try {
             byte[] data = Files.readAllBytes(filePath);
