@@ -1,3 +1,5 @@
+--liquibase formatted sql
+--changeset nargiza:21-insert data.sql
 insert into role(ROLE)
 values ( 'APPLICANT' ),
        ( 'EMPLOYER');
@@ -14,7 +16,7 @@ values ( 'Nargiza',
          'Testova',
          25,
          'nargiza@example.com',
-         'encodedPassword',
+         '$2a$12$WB2YUbFcCN0tm44SBcKUjua9yiFBsfB3vW02IjuwzY7HGtlQIKzy2',
          '0500123456',
          'avatar.jpg',
          true,
