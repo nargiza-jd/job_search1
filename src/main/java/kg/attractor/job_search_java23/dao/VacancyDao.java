@@ -43,16 +43,16 @@ public class VacancyDao {
 
         jdbcTemplate.update(
                 sql,
-                vacancy.getTitle(),
+                vacancy.getUsername(),
                 vacancy.getDescription(),
                 vacancy.getSalary(),
-                vacancy.getCategory(),
-                vacancy.getCompany(),
-                vacancy.getLocation(),
                 vacancy.getExperienceFrom(),
                 vacancy.getExperienceTo(),
-                vacancy.isPublished(),
-                vacancy.getCompanyId()
+                vacancy.getExperienceFrom(),
+                vacancy.getExperienceTo(),
+                vacancy.isActive(),
+                vacancy.getCategoryId(),
+                vacancy.getAuthorId()
         );
     }
 
@@ -74,17 +74,16 @@ public class VacancyDao {
 
         jdbcTemplate.update(
                 sql,
-                vacancy.getTitle(),
+                vacancy.getUsername(),
                 vacancy.getDescription(),
                 vacancy.getSalary(),
-                vacancy.getCategory(),
-                vacancy.getCompany(),
-                vacancy.getLocation(),
                 vacancy.getExperienceFrom(),
                 vacancy.getExperienceTo(),
-                vacancy.isPublished(),
-                vacancy.getCompanyId(),
-                vacancy.getId()
+                vacancy.getExperienceFrom(),
+                vacancy.getExperienceTo(),
+                vacancy.isActive(),
+                vacancy.getCategoryId(),
+                vacancy.getAuthorId()
         );
     }
 

@@ -9,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -20,21 +19,8 @@ public class VacancyServiceImpl implements VacancyService {
     @Override
     public List<VacancyDto> getAllVacancies() {
         return vacancyDao.getVacancies().stream()
-                .map(v -> VacancyDto.builder()
-                        .id(v.getId())
-                        .title(v.getTitle())
-                        .description(v.getDescription())
-                        .salary(v.getSalary())
-                        .category(v.getCategory())
-                        .experienceFrom(v.getExperienceFrom())
-                        .experienceTo(v.getExperienceTo())
-                        .published(v.isPublished())
-                        .company(v.getCompany())
-                        .location(v.getLocation())
-                        .companyId(v.getCompanyId())
-                        .authorId(v.getAuthorId())
-                        .build()
-                ).toList();
+                .map(this::mapToDto)
+                .toList();
     }
 
     @Override
@@ -47,18 +33,18 @@ public class VacancyServiceImpl implements VacancyService {
 
     @Override
     public void createVacancy(VacancyDto dto) {
-        List<Vacancy> vacancies = vacancyDao.getVacancies();
-
-        vacancies.add(Vacancy.builder()
-                .id(vacancies.size() + 1)
-                .title(dto.getTitle())
-                .category(dto.getCategory())
-                .salary(dto.getSalary())
+        Vacancy vacancy = Vacancy.builder()
+                .username(dto.getUsername())
                 .description(dto.getDescription())
+                .salary(dto.getSalary())
                 .experienceFrom(dto.getExperienceFrom())
                 .experienceTo(dto.getExperienceTo())
-                .published(dto.isPublished())
-                .build());
+                .isActive(dto.isActive())
+                .categoryId(dto.getCategoryId())
+                .authorId(dto.getAuthorId())
+                .build();
+
+        vacancyDao.save(vacancy);
     }
 
     @Override
@@ -66,31 +52,34 @@ public class VacancyServiceImpl implements VacancyService {
         Vacancy vacancy = vacancyDao.getVacancyById(id)
                 .orElseThrow(VacancyNotFoundException::new);
 
-        vacancy.setTitle(dto.getTitle());
-        vacancy.setCategory(dto.getCategory());
-        vacancy.setSalary(dto.getSalary());
+        vacancy.setUsername(dto.getUsername());
         vacancy.setDescription(dto.getDescription());
+        vacancy.setSalary(dto.getSalary());
         vacancy.setExperienceFrom(dto.getExperienceFrom());
         vacancy.setExperienceTo(dto.getExperienceTo());
-        vacancy.setPublished(dto.isPublished());
+        vacancy.setActive(dto.isActive());
+        vacancy.setCategoryId(dto.getCategoryId());
+        vacancy.setAuthorId(dto.getAuthorId());
+
+        vacancyDao.updateVacancy(vacancy);
     }
 
     @Override
     public void deleteVacancy(int id) {
-        List<Vacancy> vacancies = vacancyDao.getVacancies();
-        vacancies.removeIf(v -> v.getId() == id);
+        vacancyDao.deleteVacancyById(id);
     }
 
     private VacancyDto mapToDto(Vacancy vacancy) {
         return VacancyDto.builder()
                 .id(vacancy.getId())
-                .title(vacancy.getTitle())
-                .category(vacancy.getCategory())
-                .salary(vacancy.getSalary())
+                .username(vacancy.getUsername())
                 .description(vacancy.getDescription())
+                .salary(vacancy.getSalary())
                 .experienceFrom(vacancy.getExperienceFrom())
                 .experienceTo(vacancy.getExperienceTo())
-                .published(vacancy.isPublished())
+                .isActive(vacancy.isActive())
+                .categoryId(vacancy.getCategoryId())
+                .authorId(vacancy.getAuthorId())
                 .build();
     }
 }
