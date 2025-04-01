@@ -11,14 +11,11 @@ public class Response {
     private int id;
     private int resumeId;
     private int vacancyId;
-    private int applicantId;
-    private int employerId;
-
-    private int userId;
-    private String message;
+    private boolean confirmation;
 
     @Override
     public String toString() {
-        return String.format("Отклик от пользователя #%d на вакансию #%d: %s", userId, vacancyId, message);
+        return String.format("Отклик на вакансию #%d от резюме #%d (Подтверждён: %s)",
+                vacancyId, resumeId, confirmation ? "да" : "нет");
     }
 }

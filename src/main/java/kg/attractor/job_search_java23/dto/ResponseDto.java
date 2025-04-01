@@ -19,8 +19,5 @@ public class ResponseDto {
     @NotNull(message = "vacancyId не должен быть пустым")
     private Integer vacancyId;
 
-    private Integer applicantId;
-    private Integer employerId;
-    @NotNull(message = "message не должен быть пустым")
-    private String message;
+    private boolean confirmation;
 }
