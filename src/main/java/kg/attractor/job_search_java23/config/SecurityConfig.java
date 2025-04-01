@@ -22,18 +22,19 @@ import javax.sql.DataSource;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-
-    private final CustomUserDetailsService userDetailsService;
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+    private final DataSource dataSource;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService)
-                .passwordEncoder(passwordEncoder());
+        String fetchUser = "select email, password, enabled from users where email = ?";
+        String fetchRoles = "select u.email, r.role from users u join role r on u.role_id = r.id where u.email = ?";
+
+        auth.jdbcAuthentication()
+                .dataSource(dataSource)
+                .usersByUsernameQuery(fetchUser)
+                .authoritiesByUsernameQuery(fetchRoles)
+                .passwordEncoder(passwordEncoder);
     }
 
     @Bean

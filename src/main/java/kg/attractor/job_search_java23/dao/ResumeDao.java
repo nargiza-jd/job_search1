@@ -35,7 +35,7 @@ public class ResumeDao {
     public void addResume(Resume resume) {
         String sql = "INSERT INTO RESUMES (user_id, title, category, expected_salary, telegram, email, phone, facebook, linkedin, published) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, resume.getUserId(), resume.getTitle(), resume.getCategory(),
+        jdbcTemplate.update(sql, resume.getApplicantId(), resume.getTitle(), resume.getCategory(),
                 resume.getExpectedSalary(), resume.getTelegram(), resume.getEmail(),
                 resume.getPhone(), resume.getFacebook(), resume.getLinkedin(), resume.isPublished());
     }

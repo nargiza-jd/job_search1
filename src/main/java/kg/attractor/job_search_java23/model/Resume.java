@@ -19,7 +19,7 @@ public class Resume {
     private String facebook;
     private String linkedin;
     private boolean published;
-    private int userId;
+    private Integer applicantId;
 
     @Override
     public String toString() {
@@ -35,7 +35,7 @@ public class Resume {
                 facebook,
                 linkedin,
                 published ? "да" : "нет",
-                userId
+                applicantId
         );
     }
 }

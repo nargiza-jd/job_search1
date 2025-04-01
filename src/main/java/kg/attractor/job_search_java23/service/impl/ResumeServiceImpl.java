@@ -33,7 +33,7 @@ public class ResumeServiceImpl implements ResumeService {
                         .facebook(r.getFacebook())
                         .linkedin(r.getLinkedin())
                         .published(r.isPublished())
-                        .user(userService.getUserById(r.getUserId()))
+                        .user(userService.getUserById(r.getApplicantId()))
                         .build())
                 .toList();
     }
@@ -55,7 +55,7 @@ public class ResumeServiceImpl implements ResumeService {
                 .facebook(resume.getFacebook())
                 .linkedin(resume.getLinkedin())
                 .published(resume.isPublished())
-                .user(userService.getUserById(resume.getUserId()))
+                .user(userService.getUserById(resume.getApplicantId()))
                 .build();
     }
 
@@ -74,7 +74,7 @@ public class ResumeServiceImpl implements ResumeService {
                 .facebook(resumeDto.getFacebook())
                 .linkedin(resumeDto.getLinkedin())
                 .published(resumeDto.isPublished())
-                .userId(resumeDto.getUser().getId())
+                .applicantId(resumeDto.getUser().getId())
                 .build()
         );
     }
@@ -99,12 +99,18 @@ public class ResumeServiceImpl implements ResumeService {
         resume.setPublished(resumeDto.isPublished());
 
         if (resumeDto.getUser() != null) {
-            resume.setUserId(resumeDto.getUser().getId());
+            resume.setApplicantId(resumeDto.getUser().getId());
         }
     }
 
     @Override
     public void deleteResume(int id) {
+        List<Resume> resumes = resumeDao.getResumes();
+        Resume resume = resumes.stream()
+                .filter(r -> r.getId() == id)
+                .findFirst()
+                .orElseThrow(ResumeNotFoundException::new);
 
+        resumes.remove(resume);
     }
 }
