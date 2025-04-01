@@ -78,4 +78,33 @@ public class ResumeServiceImpl implements ResumeService {
                 .build()
         );
     }
+
+    @Override
+    public void updateResume(int id, ResumeDto resumeDto) {
+        List<Resume> resumes = resumeDao.getResumes();
+
+        Resume resume = resumes.stream()
+                .filter(r -> r.getId() == id)
+                .findFirst()
+                .orElseThrow(ResumeNotFoundException::new);
+
+        resume.setTitle(resumeDto.getTitle());
+        resume.setCategory(resumeDto.getCategory());
+        resume.setExpectedSalary(resumeDto.getExpectedSalary());
+        resume.setTelegram(resumeDto.getTelegram());
+        resume.setEmail(resumeDto.getEmail());
+        resume.setPhone(resumeDto.getPhone());
+        resume.setFacebook(resumeDto.getFacebook());
+        resume.setLinkedin(resumeDto.getLinkedin());
+        resume.setPublished(resumeDto.isPublished());
+
+        if (resumeDto.getUser() != null) {
+            resume.setUserId(resumeDto.getUser().getId());
+        }
+    }
+
+    @Override
+    public void deleteResume(int id) {
+
+    }
 }

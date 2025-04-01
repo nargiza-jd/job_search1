@@ -2,6 +2,7 @@ package kg.attractor.job_search_java23.service.impl;
 
 import kg.attractor.job_search_java23.dao.VacancyDao;
 import kg.attractor.job_search_java23.dto.VacancyDto;
+import kg.attractor.job_search_java23.exceptions.VacancyNotFoundException;
 import kg.attractor.job_search_java23.model.Vacancy;
 import kg.attractor.job_search_java23.service.VacancyService;
 import lombok.RequiredArgsConstructor;
@@ -24,43 +25,59 @@ public class VacancyServiceImpl implements VacancyService {
     }
 
     @Override
-    public VacancyDto getVacancyById(String vacancyId) {
-        return vacancyDao.getVacancyById(Integer.parseInt(vacancyId))
-                .map(this::mapToDto)
-                .orElse(null);
+    public VacancyDto getVacancyById(String id) {
+        int vacancyId = Integer.parseInt(id);
+        Vacancy vacancy = vacancyDao.getVacancyById(vacancyId)
+                .orElseThrow(VacancyNotFoundException::new);
+        return mapToDto(vacancy);
     }
 
     @Override
     public void createVacancy(VacancyDto dto) {
-        Vacancy vacancy = Vacancy.builder()
+        List<Vacancy> vacancies = vacancyDao.getVacancies();
+
+        vacancies.add(Vacancy.builder()
+                .id(vacancies.size() + 1)
                 .title(dto.getTitle())
-                .description(dto.getDescription())
-                .salary(dto.getSalary())
                 .category(dto.getCategory())
-                .company(dto.getCompany())
-                .location(dto.getLocation())
+                .salary(dto.getSalary())
+                .description(dto.getDescription())
                 .experienceFrom(dto.getExperienceFrom())
                 .experienceTo(dto.getExperienceTo())
                 .published(dto.isPublished())
-                .companyId(dto.getCompanyId())
-                .build();
+                .build());
+    }
 
-        vacancyDao.save(vacancy);
+    @Override
+    public void updateVacancy(int id, VacancyDto dto) {
+        Vacancy vacancy = vacancyDao.getVacancyById(id)
+                .orElseThrow(VacancyNotFoundException::new);
+
+        vacancy.setTitle(dto.getTitle());
+        vacancy.setCategory(dto.getCategory());
+        vacancy.setSalary(dto.getSalary());
+        vacancy.setDescription(dto.getDescription());
+        vacancy.setExperienceFrom(dto.getExperienceFrom());
+        vacancy.setExperienceTo(dto.getExperienceTo());
+        vacancy.setPublished(dto.isPublished());
+    }
+
+    @Override
+    public void deleteVacancy(int id) {
+        List<Vacancy> vacancies = vacancyDao.getVacancies();
+        vacancies.removeIf(v -> v.getId() == id);
     }
 
     private VacancyDto mapToDto(Vacancy vacancy) {
         return VacancyDto.builder()
                 .id(vacancy.getId())
                 .title(vacancy.getTitle())
-                .description(vacancy.getDescription())
-                .salary(vacancy.getSalary())
                 .category(vacancy.getCategory())
-                .company(vacancy.getCompany())
-                .location(vacancy.getLocation())
+                .salary(vacancy.getSalary())
+                .description(vacancy.getDescription())
                 .experienceFrom(vacancy.getExperienceFrom())
                 .experienceTo(vacancy.getExperienceTo())
                 .published(vacancy.isPublished())
-                .companyId(vacancy.getCompanyId())
                 .build();
     }
 }

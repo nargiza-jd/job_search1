@@ -34,13 +34,13 @@ public class ResumeController {
 
     @PutMapping("{id}")
     public HttpStatus updateResume(@PathVariable int id, @RequestBody @Valid ResumeDto resumeDto) {
-        // TODO: реализовать
+        resumeService.updateResume(id, resumeDto);
         return HttpStatus.OK;
     }
 
     @DeleteMapping("{id}")
     public HttpStatus deleteResume(@PathVariable int id) {
-        // TODO: реализовать
+        resumeService.deleteResume(id);
         return HttpStatus.OK;
     }
 }

@@ -10,4 +10,8 @@ public interface ResumeService {
     ResumeDto getResumeById(String resumeId);
 
     void createResume(ResumeDto resumeDto);
+
+    void updateResume(int id, ResumeDto resumeDto);
+
+    void deleteResume(int id);
 }
