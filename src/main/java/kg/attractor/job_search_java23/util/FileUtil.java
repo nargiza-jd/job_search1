@@ -1,9 +1,5 @@
 package kg.attractor.job_search_java23.util;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import kg.attractor.job_search_java23.model.Resume;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -13,34 +9,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.Reader;
-import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.UUID;
 
 @Service
 public class FileUtil {
 
-    private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
     private static final String UPLOAD_DIR = "data/";
-
-    public List<Resume> getResumes(String path) {
-        Type listType = new TypeToken<Map<String, List<Resume>>>() {}.getType();
-        try (Reader reader = new FileReader(UPLOAD_DIR + path)) {
-            Map<String, List<Resume>> resumes = gson.fromJson(reader, listType);
-            return resumes.getOrDefault("resumes", List.of());
-        } catch (IOException e) {
-            e.printStackTrace();
-            return List.of();
-        }
-    }
 
     public String saveUploadFile(MultipartFile file, String subDir) {
         String uuidFile = UUID.randomUUID().toString();

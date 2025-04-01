@@ -39,4 +39,5 @@ db/*.db
 logs/
 
 /db/
+
 /logs/

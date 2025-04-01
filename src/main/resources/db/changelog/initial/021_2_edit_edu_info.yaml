@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 021
+      author: nargiza-jd
+      changes:
+        - dropColumn:
+            tableName: contacts_info
+            columns:
+              - column:
+                  name: value
+
+        - addColumn:
+            tableName: contacts_info
+            columns:
+              - column:
+                  name: contact_value
+                  type: varchar(500)
